@@ -54,18 +54,21 @@ ul {
 }
 
 .container {
-	width: 1180px;
+	width: 920px;
 	margin: 0 auto;
 }
 
 .site-header {
 	padding: 10px 0;
-	border-bottom: 10px solid #ffbe00;
+	border-bottom: 4px solid #ffbe00;
+}
+.site-title {
+	line-height: 0;
 }
 #homeBanner {
     background-color: #dddddd;
     display: block;
-    height: 650px;
+    height: 480px;
     margin: 0 auto;
     overflow: hidden;
     padding-top: 1px;
@@ -76,33 +79,36 @@ ul {
    /* position: fixed;
     */top: 150px;
     width: 100%;
-    padding-top: 35px;
+    padding-top: 55px;
+    padding-left: 44px;
 }
 #bannerText h1 {
-	font-size: 60px;
+	font-size: 48px;
 	font-weight: normal;
 }
 #bannerText h2 {
-	font-size: 50px;font-weight: normal;
+	font-size: 36px;
+	font-weight: normal;
 }
 .play {
-	display: inline-block;
-	height: 154px;
-    width: 154px;
-    margin-top: 70px;
-	background: url(images/play-icon.png) no-repeat left top;
-	-webkit-transition: all 0.3s ease 0s;
-	-moz-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
+  display: inline-block;
+  height: 77px;
+  width: 77px;
+  margin-top: 55px;
+  background: url(images/play-icon.png) no-repeat left top;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-left: -36px;
 }
 .play:hover {
 	opacity: 0.9
 }
 h2.op {
-	margin-left: 130px;
+	margin-left: 152px;
 }
 .nav-menu {
-	padding: 4px 154px 0 0;
+	padding: 4px 136px 0 0;
 	position: relative;
 }
 .nav-menu li {
@@ -112,9 +118,9 @@ h2.op {
 
 .nav-menu li a{
 	display: block;
-	padding: 15px;
+	padding: 12px;
 	color: #2d373f;
-	font-size: 24px;
+	font-size: 16px;
 	font-family: 'OratorStd',Tahoma,arial;
 
 }
@@ -126,20 +132,21 @@ h2.op {
 	right: 0;    top: -10px;
 	background-color: #ffbe00;
 	color: white;
-	font-size: 30px;
+	font-size: 20px;
 	text-align: center;
-	width: 130px;
+	width: 108px;
+	padding: 0 22px;
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
 .nav-menu li.last-child:hover {
-	width: 140px;
+	width: 130px;
 	right: -5px;
 }
 .nav-menu li.last-child a {
-	text-align: center;
-	color: white;padding: 22px 0;
+	text-align: center;font-size: 20px;
+	color: white;padding: 16px 0;
 }
 .nav-menu li.last-child a:hover {
 	color: #206a6b;
@@ -148,30 +155,31 @@ h2.op {
 .item-post {
     float: left;
     padding: 20px;
-    width: 25%;text-align: center;
+    width: 33%;text-align: center;
 }
 .lists  {
 	margin: 0 -20px;
 }
 .item-post a {
-	border-radius: 100%;
-	border:4px solid #ffbe00;
-	background-color: white;
+	text-align: center;
 	display: block;
-	margin-bottom: 16px;
 }
 .item-post a img {
-	border-radius: 100%;display: block;
-	height: 257px;
+	border-radius: 100%;
+	border:8px solid #ffbe00;
+	background-color: white;
+	margin-bottom: 16px;
+	  height: 190px;
+  width: 190px;
 }
 .item-post h2 {
-	font-size: 20px;
+	font-size: 16px;
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	font-weight: normal;
 }
 .title {
-	text-align: center;font-size: 30px;
+	text-align: center;font-size: 24px;
 	margin-bottom: 45px;font-weight: normal;
 }
 img {
@@ -180,65 +188,63 @@ img {
 
 .jcarousel-wrapper {
 	position: relative;
+	margin-bottom: 56px;
 }
 
 .jcarousel-control-prev, .jcarousel-control-next {
     background: rgba(0, 0, 0, 0) url("images/next-prev.png") repeat-x scroll left top;
     display: block;
-    height: 113px;
+    height: 85px;
     left: 0;
     position: absolute;
-    top: 15px;
-    width: 56px;   text-indent: -9999px;
+    top: 30px;
+    width: 44px;   text-indent: -9999px;
 }
 .jcarousel-control-prev {
-    background-position: 0 4px;
-    left: 90px;
+    background-position: 0px 0px;
+    left: 15px;
 }
 .jcarousel-control-next {
-    background-position: -55px 4px;
+    background-position: -44px 1px;
     left: auto;
-    right: 130px;
+    right: 15px;
 }
 .bottom-area {
 	background:   url(images/bg-footer.png) repeat-x left top;
-	padding-top: 22px;
+	padding-top: 18px;
 	
 }
 .bottom-area .inner {
-	background:  #b9dede;padding-top: 60px;padding-bottom: 40px;
+	background:  #b9dede;padding-top: 45px;padding-bottom: 40px;
 }
 .site-footer {
 	background-color: #2d373f;
-	color: white;
-	padding: 25px 0;
+	color: #dce8e6;
+	padding: 10px 0;
 }
 
 .site-footer .left-footer li {
 	display: inline-block;
 }.site-footer .left-footer li a{
-	color: white;
-	padding: 0 8px;font-size: 20px;
+	color: #dce8e6;
+	padding: 0 10px;font-size: 14px;
 	text-transform: uppercase;
 }
 .social li {
 	display: block;float: left;
-	margin: 0 12px;
+	margin: 0 10px;
 }
 .social a {
 	display: inline-block;
-	height: 66px;
-    width: 66px;
+	height: 44px;
+    width:  44px;
 	background: url(images/social-icons.png) no-repeat left top;
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
 .left-footer {
-    margin-top: 22px;
-}
-.right-footer {
-    margin-right: 110px;
+    margin-top: 16px;
 }
 .center {
 	text-align: center;
@@ -247,23 +253,23 @@ img {
 .social a  span {display: none;}
 
 .social .facebook a{
-	background-position: 0px -65px
+	background-position: 0px -44px;
 }.social .facebook a:hover{
-	background-position: 0px 0px
+	background-position: 0px -1px
 }
 .social .twiiter a{
-	background-position: -94px -65px
+	background-position: -63px -44px;
 }.social .twiiter a:hover{
-	background-position: -94px 0px
+	background-position: -63px -1px
 }
 .social .youtube a{
-	background-position: -190px -65px
+	background-position: -126px -44px;
 }.social .youtube a:hover{
-	background-position: -190px 0px
+	background-position: -126px  -1px
 }
 
 .jcarousel {
-	width: 877px;margin: 0 auto;height: 155px;
+	width: 798px;margin: 0 auto;height: 148px;
 	text-align: center;
 	overflow: hidden;
 }
@@ -271,20 +277,22 @@ img {
 -webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
-	border:1px solid #ffbe00;
+	border:3px solid #ffbe00;
+	width: 254px;
+	height: 146px;
+	border-radius: 3px;
 }
 .jcarousel  ul li img:hover {
 	opacity: 0.8;
 }
 .jcarousel  ul li{
-	width: 280px;
-	height: 155px;
+	
 	display: block;
 	float: left;
-	margin: 0 0px;
+	margin: 0 6px;
 
 }
 
 .site-main {
-	padding: 50px 0;
+	padding: 25px 0;
 }
