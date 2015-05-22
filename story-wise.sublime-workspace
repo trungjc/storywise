@@ -1,0 +1,836 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pos",
+				"pos	position: ${1:relative};"
+			],
+			[
+				"ou",
+				"outline"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"list-s",
+				"list-style"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"r",
+				"relative"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"background-",
+				"background-attachment"
+			],
+			[
+				"a",
+				"arrow"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"boder",
+				"border-radius"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"cate",
+				"categories_info"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"mi",
+				"min-width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "html/style.css",
+			"settings":
+			{
+				"buffer_size": 6598,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "html/index.html",
+			"settings":
+			{
+				"buffer_size": 5426,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n	<title>fancyBox - Fancy jQuery Lightbox Alternative | Demonstration</title>\n	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n\n	<!-- Add jQuery library -->\n	<script type=\"text/javascript\" src=\"../lib/jquery-1.10.1.min.js\"></script>\n\n	<!-- Add mousewheel plugin (this is optional) -->\n	<script type=\"text/javascript\" src=\"../lib/jquery.mousewheel-3.0.6.pack.js\"></script>\n\n	<!-- Add fancyBox main JS and CSS files -->\n	<script type=\"text/javascript\" src=\"../source/jquery.fancybox.js?v=2.1.5\"></script>\n	<link rel=\"stylesheet\" type=\"text/css\" href=\"../source/jquery.fancybox.css?v=2.1.5\" media=\"screen\" />\n\n	<!-- Add Button helper (this is optional) -->\n	<link rel=\"stylesheet\" type=\"text/css\" href=\"../source/helpers/jquery.fancybox-buttons.css?v=1.0.5\" />\n	<script type=\"text/javascript\" src=\"../source/helpers/jquery.fancybox-buttons.js?v=1.0.5\"></script>\n\n	<!-- Add Thumbnail helper (this is optional) -->\n	<link rel=\"stylesheet\" type=\"text/css\" href=\"../source/helpers/jquery.fancybox-thumbs.css?v=1.0.7\" />\n	<script type=\"text/javascript\" src=\"../source/helpers/jquery.fancybox-thumbs.js?v=1.0.7\"></script>\n\n	<!-- Add Media helper (this is optional) -->\n	<script type=\"text/javascript\" src=\"../source/helpers/jquery.fancybox-media.js?v=1.0.6\"></script>\n\n	<script type=\"text/javascript\">\n		$(document).ready(function() {\n			/*\n			 *  Simple image gallery. Uses default settings\n			 */\n\n			$('.fancybox').fancybox();\n\n			/*\n			 *  Different effects\n			 */\n\n			// Change title type, overlay closing speed\n			$(\".fancybox-effects-a\").fancybox({\n				helpers: {\n					title : {\n						type : 'outside'\n					},\n					overlay : {\n						speedOut : 0\n					}\n				}\n			});\n\n			// Disable opening and closing animations, change title type\n			$(\".fancybox-effects-b\").fancybox({\n				openEffect  : 'none',\n				closeEffect	: 'none',\n\n				helpers : {\n					title : {\n						type : 'over'\n					}\n				}\n			});\n\n			// Set custom style, close if clicked, change title type and overlay color\n			$(\".fancybox-effects-c\").fancybox({\n				wrapCSS    : 'fancybox-custom',\n				closeClick : true,\n\n				openEffect : 'none',\n\n				helpers : {\n					title : {\n						type : 'inside'\n					},\n					overlay : {\n						css : {\n							'background' : 'rgba(238,238,238,0.85)'\n						}\n					}\n				}\n			});\n\n			// Remove padding, set opening and closing animations, close if clicked and disable overlay\n			$(\".fancybox-effects-d\").fancybox({\n				padding: 0,\n\n				openEffect : 'elastic',\n				openSpeed  : 150,\n\n				closeEffect : 'elastic',\n				closeSpeed  : 150,\n\n				closeClick : true,\n\n				helpers : {\n					overlay : null\n				}\n			});\n\n			/*\n			 *  Button helper. Disable animations, hide close button, change title type and content\n			 */\n\n			$('.fancybox-buttons').fancybox({\n				openEffect  : 'none',\n				closeEffect : 'none',\n\n				prevEffect : 'none',\n				nextEffect : 'none',\n\n				closeBtn  : false,\n\n				helpers : {\n					title : {\n						type : 'inside'\n					},\n					buttons	: {}\n				},\n\n				afterLoad : function() {\n					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');\n				}\n			});\n\n\n			/*\n			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked\n			 */\n\n			$('.fancybox-thumbs').fancybox({\n				prevEffect : 'none',\n				nextEffect : 'none',\n\n				closeBtn  : false,\n				arrows    : false,\n				nextClick : true,\n\n				helpers : {\n					thumbs : {\n						width  : 50,\n						height : 50\n					}\n				}\n			});\n\n			/*\n			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.\n			*/\n			$('.fancybox-media')\n				.attr('rel', 'media-gallery')\n				.fancybox({\n					openEffect : 'none',\n					closeEffect : 'none',\n					prevEffect : 'none',\n					nextEffect : 'none',\n\n					arrows : false,\n					helpers : {\n						media : {},\n						buttons : {}\n					}\n				});\n\n			/*\n			 *  Open manually\n			 */\n\n			$(\"#fancybox-manual-a\").click(function() {\n				$.fancybox.open('1_b.jpg');\n			});\n\n			$(\"#fancybox-manual-b\").click(function() {\n				$.fancybox.open({\n					href : 'iframe.html',\n					type : 'iframe',\n					padding : 5\n				});\n			});\n\n			$(\"#fancybox-manual-c\").click(function() {\n				$.fancybox.open([\n					{\n						href : '1_b.jpg',\n						title : 'My title'\n					}, {\n						href : '2_b.jpg',\n						title : '2nd title'\n					}, {\n						href : '3_b.jpg'\n					}\n				], {\n					helpers : {\n						thumbs : {\n							width: 75,\n							height: 50\n						}\n					}\n				});\n			});\n\n\n		});\n	</script>\n	<style type=\"text/css\">\n		.fancybox-custom .fancybox-skin {\n			box-shadow: 0 0 50px #222;\n		}\n\n		body {\n			max-width: 700px;\n			margin: 0 auto;\n		}\n	</style>\n</head>\n<body>\n	<h1>fancyBox</h1>\n\n	<p>This is a demonstration. More information and examples: <a href=\"http://fancyapps.com/fancybox/\">www.fancyapps.com/fancybox/</a></p>\n\n	<h3>Simple image gallery</h3>\n	<p>\n		<a class=\"fancybox\" href=\"1_b.jpg\" data-fancybox-group=\"gallery\" title=\"Lorem ipsum dolor sit amet\"><img src=\"1_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox\" href=\"2_b.jpg\" data-fancybox-group=\"gallery\" title=\"Etiam quis mi eu elit temp\"><img src=\"2_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox\" href=\"3_b.jpg\" data-fancybox-group=\"gallery\" title=\"Cras neque mi, semper leon\"><img src=\"3_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox\" href=\"4_b.jpg\" data-fancybox-group=\"gallery\" title=\"Sed vel sapien vel sem uno\"><img src=\"4_s.jpg\" alt=\"\" /></a>\n	</p>\n\n	<h3>Different effects</h3>\n	<p>\n		<a class=\"fancybox-effects-a\" href=\"5_b.jpg\" title=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"><img src=\"5_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox-effects-b\" href=\"5_b.jpg\" title=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"><img src=\"5_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox-effects-c\" href=\"5_b.jpg\" title=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"><img src=\"5_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox-effects-d\" href=\"5_b.jpg\" title=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"><img src=\"5_s.jpg\" alt=\"\" /></a>\n	</p>\n\n	<h3>Various types</h3>\n	<p>\n		fancyBox will try to guess content type from href attribute but you can specify it directly by adding classname (fancybox.image, fancybox.iframe, etc).\n	</p>\n	<ul>\n		<li><a class=\"fancybox\" href=\"#inline1\" title=\"Lorem ipsum dolor sit amet\">Inline</a></li>\n		<li><a class=\"fancybox fancybox.ajax\" href=\"ajax.txt\">Ajax</a></li>\n		<li><a class=\"fancybox fancybox.iframe\" href=\"iframe.html\">Iframe</a></li>\n		<li><a class=\"fancybox\" href=\"http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf\">Swf</a></li>\n	</ul>\n\n	<div id=\"inline1\" style=\"width:400px;display: none;\">\n		<h3>Etiam quis mi eu elit</h3>\n		<p>\n			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor facilisis id et neque. Nulla sit amet sem sapien. Vestibulum imperdiet porta ante ac ornare. Nulla et lorem eu nibh adipiscing ultricies nec at lacus. Cras laoreet ultricies sem, at blandit mi eleifend aliquam. Nunc enim ipsum, vehicula non pretium varius, cursus ac tortor. Vivamus fringilla congue laoreet. Quisque ultrices sodales orci, quis rhoncus justo auctor in. Phasellus dui eros, bibendum eu feugiat ornare, faucibus eu mi. Nunc aliquet tempus sem, id aliquam diam varius ac. Maecenas nisl nunc, molestie vitae eleifend vel, iaculis sed magna. Aenean tempus lacus vitae orci posuere porttitor eget non felis. Donec lectus elit, aliquam nec eleifend sit amet, vestibulum sed nunc.\n		</p>\n	</div>\n\n	<p>\n		Ajax example will not run from your local computer and requires a server to run.\n	</p>\n\n	<h3>Button helper</h3>\n	<p>\n		<a class=\"fancybox-buttons\" data-fancybox-group=\"button\" href=\"1_b.jpg\"><img src=\"1_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox-buttons\" data-fancybox-group=\"button\" href=\"2_b.jpg\"><img src=\"2_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox-buttons\" data-fancybox-group=\"button\" href=\"3_b.jpg\"><img src=\"3_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox-buttons\" data-fancybox-group=\"button\" href=\"4_b.jpg\"><img src=\"4_s.jpg\" alt=\"\" /></a>\n	</p>\n\n	<h3>Thumbnail helper</h3>\n	<p>\n		<a class=\"fancybox-thumbs\" data-fancybox-group=\"thumb\" href=\"4_b.jpg\"><img src=\"4_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox-thumbs\" data-fancybox-group=\"thumb\" href=\"3_b.jpg\"><img src=\"3_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox-thumbs\" data-fancybox-group=\"thumb\" href=\"2_b.jpg\"><img src=\"2_s.jpg\" alt=\"\" /></a>\n\n		<a class=\"fancybox-thumbs\" data-fancybox-group=\"thumb\" href=\"1_b.jpg\"><img src=\"1_s.jpg\" alt=\"\" /></a>\n	</p>\n\n	<h3>Media helper</h3>\n	<p>\n		Will not run from your local computer, requires a server to run.\n	</p>\n\n	<ul>\n		<li><a class=\"fancybox-media\" href=\"http://www.youtube.com/watch?v=opj24KnzrWo\">Youtube</a></li>\n		<li><a class=\"fancybox-media\" href=\"http://vimeo.com/47480346\">Vimeo</a></li>\n		<li><a class=\"fancybox-media\" href=\"http://www.metacafe.com/watch/7635964/\">Metacafe</a></li>\n		<li><a class=\"fancybox-media\" href=\"http://www.dailymotion.com/video/xoeylt_electric-guest-this-head-i-hold_music\">Dailymotion</a></li>\n		<li><a class=\"fancybox-media\" href=\"http://twitvid.com/QY7MD\">Twitvid</a></li>\n		<li><a class=\"fancybox-media\" href=\"http://twitpic.com/7p93st\">Twitpic</a></li>\n		<li><a class=\"fancybox-media\" href=\"http://instagr.am/p/IejkuUGxQn\">Instagram</a></li>\n	</ul>\n\n	<h3>Open manually</h3>\n	<ul>\n		<li><a id=\"fancybox-manual-a\" href=\"javascript:;\">Open single item</a></li>\n		<li><a id=\"fancybox-manual-b\" href=\"javascript:;\">Open single item, custom options</a></li>\n		<li><a id=\"fancybox-manual-c\" href=\"javascript:;\">Open gallery</a></li>\n	</ul>\n\n	<p>\n		Photo Credit: Instagrammer @whitjohns\n	</p>\n</body>\n</html>",
+			"file": "/C/Users/Computer/Downloads/fancyapps-fancyBox-v2.1.5-0-ge2248f4/fancyapps-fancyBox-18d1712/demo/index.html",
+			"file_size": 9653,
+			"file_write_time": 130767851844258882,
+			"settings":
+			{
+				"buffer_size": 9680,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/js/theme_trust.js",
+			"settings":
+			{
+				"buffer_size": 3200,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/css/jquery.fancybox.css",
+			"settings":
+			{
+				"buffer_size": 4863,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 51.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/xampp/htdocs/storywise",
+		"/D/xampp/htdocs/storywise/html",
+		"/D/xampp/htdocs/storywise/html/css",
+		"/D/xampp/htdocs/storywise/wp-content",
+		"/D/xampp/htdocs/storywise/wp-content/themes",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen"
+	],
+	"file_history":
+	[
+		"/D/xampp/htdocs/storywise/html/js/jquery.fancybox.pack.js",
+		"/D/xampp/htdocs/storywise/html/host",
+		"/D/xampp/htdocs/storywise/html/images/bg-banner.png",
+		"/D/xampp/htdocs/storywise/index.html",
+		"/C/Users/Computer/Downloads/wordpress-popular-posts.3.2.2/wordpress-popular-posts/views/index.php",
+		"/D/xampp/htdocs/makeitcount/MIC-FE/client/modules/home/views/home.html",
+		"/D/duan/Duc/freelancer/fuselms/source-thuy/home.html",
+		"/D/xampp/htdocs/makeitcount/MIC-FE/client/modules/home/views/home-original.html",
+		"/D/xampp/htdocs/makeitcount/MIC-FE/node_modules/body-parser/HISTORY.md",
+		"/D/xampp/htdocs/makeitcount/MIC-FE/client/modules/home/services.js",
+		"/D/xampp/htdocs/makeitcount/MIC-FE/client/modules/home/views/groups-home.html",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/style.css",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/functions.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/header.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/page.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/archive.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/category.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/comments.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/less/_main.less",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/twentyfifteen/sidebar.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/sidebar-content.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/content-page.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/sidebar.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/functions-custom.php",
+		"/D/xampp/htdocs/elecsan/wp-content/themes/elecsan-theme/categoryv.php",
+		"/D/xampp/htdocs/303velocity/Developer/flat-ui/README.md",
+		"/D/xampp/htdocs/303velocity/wordpress/DB/303velocity.sql",
+		"/D/xampp/htdocs/303velocity/wordpress/wp-content/themes/startup/templates/startup-framework/build-wp/flat-ui/README.md",
+		"/D/xampp/htdocs/303velocity/wordpress/wp-content/themes/startup/vendor/Timber/vendor/twig/twig/CHANGELOG",
+		"/D/xampp/htdocs/303velocity/wordpress/wp-includes/ID3/module.audio-video.flv.php",
+		"/D/xampp/htdocs/athlete/assets/sass/modules/feature-side-unit.sass",
+		"/D/xampp/htdocs/athlete/assets/sass/responsive/responsive.sass",
+		"/D/xampp/htdocs/athlete/assets/sass/modules/banner.sass",
+		"/D/xampp/htdocs/athlete/assets/sass/base/elements.sass",
+		"/D/xampp/htdocs/athlete/assets/sass/modules/menu.sass",
+		"/D/xampp/htdocs/athlete/assets/sass/layouts/layouts.sass",
+		"/D/xampp/htdocs/athlete/assets/js/fanbase.js",
+		"/D/xampp/htdocs/athlete/home.html",
+		"/D/xampp/htdocs/athlete/assets/sass/modules/search-box.sass",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/modules/mod_k2_content/tmpl/Default/default.php",
+		"/D/xampp/htdocs/athlete/assets/less/app.scss",
+		"/D/xampp/htdocs/athlete/assets/less/responsive/responsive.scss",
+		"/D/xampp/htdocs/athlete/assets/less/variables.scss",
+		"/D/xampp/htdocs/athlete/assets/less/modules/feature-side-unit.scss",
+		"/D/xampp/htdocs/athlete/assets/sass/app.sass",
+		"/D/xampp/htdocs/athlete/assets/sass/base/bases-dir.sass",
+		"/D/xampp/htdocs/athlete/assets/sass/modules/facepile-side-unit.sass",
+		"/D/xampp/htdocs/athlete/assets/sass/variables.sass",
+		"/D/xampp/htdocs/athlete/assets/sass/modules/content-card.sass",
+		"/D/xampp/htdocs/athlete/assets/css/app.css",
+		"/D/xampp/htdocs/athlete/assets/less/modules/facepile-side-unit.scss",
+		"/D/xampp/htdocs/athlete/assets/less/modules/menu.scss",
+		"/D/xampp/htdocs/athlete/assets/less/modules/search-box.scss",
+		"/D/xampp/htdocs/athlete/assets/less/base/bases-dir.scss",
+		"/D/xampp/htdocs/athlete/assets/less/base/elements.scss",
+		"/D/xampp/htdocs/athlete/assets/less/modules/modules-dir.scss",
+		"/D/xampp/htdocs/athlete/assets/less/layouts/home.scss",
+		"/D/xampp/htdocs/athlete/assets/less/modules/top-bar.scss",
+		"/D/xampp/htdocs/athlete/assets/less/modules/banner.scss",
+		"/D/xampp/htdocs/athlete/assets/less/layouts/responsive.scss",
+		"/D/xampp/htdocs/athlete/assets/less/layouts/layouts-dir.scss",
+		"/D/xampp/htdocs/athlete/assets/css/ionicons.min.css",
+		"/D/xampp/htdocs/athlete/assets/less/plugins/bitters/_variables.scss",
+		"/D/xampp/htdocs/athlete/assets/less/plugins/bitters/_typography.scss",
+		"/D/xampp/htdocs/athlete/assets/less/plugins/bitters/_base.scss",
+		"/D/xampp/htdocs/athlete/assets/less/plugins/plugins-dir.scss",
+		"/D/xampp/htdocs/athlete/assets/less/modules/content-card.scss",
+		"/D/xampp/htdocs/athlete/assets/less/modules/snipet.scss",
+		"/D/xampp/htdocs/athlete/assets/less/app.css",
+		"/D/xampp/htdocs/athlete/assets/less/plugins/plugins-dir.css",
+		"/D/xampp/htdocs/athlete/assets/less/base/bases-dir.css",
+		"/D/xampp/htdocs/athlete/assets/less/plugins/_plugins-dir.scss",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/parallax.js",
+		"/D/xampp/htdocs/minc/wp-config.php",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/style.css",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/configuration.php",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/templates/leadingteams/less/style.less",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/default/template/product/product.tpl",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/leadingteams/template/product/product.tpl",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/side-nav.js",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/index.php",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/templates/leadingteams/tpls/blocks/spotlight-3.php",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/leadingteams/stylesheet/stylesheet.css",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/components/com_mijoshop/opencart/vqmod/xml/Prev_Next_Product.xml",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/components/com_mijoshop/opencart/catalog/view/javascript/common.js",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/footer.php",
+		"/C/Users/Computer/Downloads/PriceConnectorTemplate/PriceConnectorTemplate/css/960.css",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/leadingteams/template/product/category.tpl",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/functions.php",
+		"/D/xampp/htdocs/minc/wp-content/plugins/contact-form-7/admin/admin.php",
+		"/D/xampp/htdocs/minc/wp-content/plugins/contact-form-7/wp-contact-form-7.php",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/header.php",
+		"/D/xampp/htdocs/leadingteams/configuration.php",
+		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/leadingteams/template/product/category.tpl",
+		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/vqmod/xml/Prev_Next_Product.xml",
+		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/controller/product/category.php",
+		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/leadingteams/template/product/product.tpl",
+		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/controller/product/product.php",
+		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/default/template/product/category.tpl",
+		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/leadingteams/template/common/header.tpl",
+		"/C/Users/Computer/Downloads/jQuery-Parallax-master(1)/jQuery-Parallax-master/index.html",
+		"/D/xampp/htdocs/infowrap/assets/js/main.js",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/jquery.scrollTo-1.4.2-min.js",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/jquery.parallax-1.1.3.js",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/jquery.localscroll-1.2.7-min.js",
+		"/D/xampp/htdocs/leadingteams/components/com_easyblog/themes/dashboard/system/media.browser.tree-item.ejs",
+		"/D/xampp/htdocs/minc/wp-admin/ms-edit.php",
+		"/D/xampp/htdocs/minc/wp-content/plugins/post-types-order/post-types-order.php",
+		"/D/xampp/htdocs/slices/wp-content/themes/slices-theme/page-locations.php",
+		"/D/xampp/htdocs/minc/wp-content/themes/twentyfourteen/functions.php",
+		"/C/Users/Computer/Desktop/Parallax Demo_files/New folder/jQuery Parallax Plugin Demo.htm",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/backgrounds.js",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/kinetics.js",
+		"/D/xampp/htdocs/slices/wp-content/themes/slices-theme/slices/slices-functions.php",
+		"/D/xampp/htdocs/nhanviet/catalog/view/theme/pav_queenbeauty/stylesheet/stylesheet.css",
+		"/D/xampp/htdocs/nhanviet/admin/view/stylesheet/stylesheet.css",
+		"/D/xampp/htdocs/nhanviet/admin/language/vietnamese/common/footer.php",
+		"/D/xampp/htdocs/nhanviet/catalog/view/theme/pav_queenbeauty/stylesheet/customize/demo1.css",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc/style.css",
+		"/D/xampp/htdocs/minc/wp-content/themes/minc/functions.php",
+		"/D/xampp/htdocs/slices/wp-content/themes/slices-theme/functions.php",
+		"/D/xampp/htdocs/minc/wp-content/themes/twentyfourteen/index.php",
+		"/D/xampp/htdocs/minc/wp-content/themes/twentythirteen/functions.php",
+		"/D/xampp/htdocs/ibroker/templates/ibroker/tpls/blocks/header.php",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/templates/leadingteams/tpls/blocks/footer.php",
+		"/D/xampp/htdocs/leadingteams-trung/leadingteams/templates/leadingteams/tpls/blocks/head.php",
+		"/D/xampp/htdocs/csp/configuration.php",
+		"/D/xampp/htdocs/nhanviet/system/library/mail_pav.php"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"http://localhost/liveout/blog/",
+			"http://localhost/liveout/blog/wp-content/plugins/contestburner",
+			"D:\\xampp\\htdocs\\makeitcount\\MIC-FE",
+			"D:\\xampp\\htdocs\\303velocity",
+			"D:\\xampp\\htdocs\\athlete",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#inline",
+			"fancybox",
+			"0.5s;",
+			"0.3s",
+			"0s;",
+			"0.3s",
+			".item-post",
+			".item-post a",
+			".jcarousel-control-prev, .jcarousel-control-next",
+			"play",
+			"\n#bannerText",
+			"%;\n",
+			".jcarousel-control-prev, ",
+			"%;\n",
+			".jcarousel-control-prev",
+			".jcarousel-control-prev, ",
+			".jcarousel-control-next",
+			".jcarousel-control-prev, .jcarousel-control-next",
+			"#bannerText",
+			"title",
+			".social .facebook a{\n	background-position: 0px -65px\n}",
+			"#bannerText h1 {\n	font-style: 60px;\n}",
+			"style=\"width: 200px;\"",
+			">\n",
+			"<hr>",
+			" <hr>",
+			"c",
+			".stress-label",
+			"masks",
+			".mask",
+			".radial-progress .circle .mask",
+			".radial-progress .circle .masks",
+			".radial-progress .circle .masks, .radial-progress .circle .fill, .radial-progress .circle .shadow",
+			".content-24 img.image",
+			"custom_infinite_scroll_js",
+			"infinite_scroll",
+			"$meta_type = get_meta_type( $q['meta_type'] );",
+			"$meta_type = get_meta_type( $q['meta_type'] ); ",
+			"?>\n",
+			"contest_links_frame",
+			"contest_links",
+			"contest_links\n",
+			"--\n",
+			"http://liveout.org/blog/",
+			"http",
+			".btn",
+			"section bg-gray section3",
+			".banner-right",
+			"ng-app",
+			"stepslineChart",
+			"distancelineChart",
+			"gray",
+			"ibox",
+			"ibox float-e-margins",
+			"wrapper wrapper-content",
+			"showDeviceReg",
+			"ng-binding",
+			"dashboard-header",
+			".widget_product_search",
+			".home .widget_product_search",
+			"widget_product_search",
+			"tab1",
+			"Twenty_Eleven_Ephemera_Widget",
+			"Twenty_Eleven_Ephemera_Widget'",
+			"widget_logic.php",
+			"twentyfifteen_entry_meta",
+			"wordpress",
+			"entry-footer",
+			"></",
+			"more-link",
+			"screen-reader-text",
+			".media-body",
+			"the_archive_title",
+			" .site-content",
+			".woocommerce-page",
+			".js",
+			"functions.js",
+			"function.js",
+			"common",
+			"entry-content",
+			"blog-footer",
+			"improved",
+			"one-third column",
+			" Fanbase.showTopMenu();",
+			"var CTAbutton = \"div#banner div.subscriber .btn\";",
+			"12px",
+			">\n",
+			".pinned",
+			"pinned",
+			"fa",
+			"Heavy",
+			"<span>500 new stories</span>",
+			" <div class=\"name\">Kyrie Irving</div>",
+			";\n",
+			"visible",
+			";}",
+			"$helvetica",
+			"$base-font-family",
+			"primary-navigation",
+			"  max-width: 50%;",
+			"50%",
+			"<<",
+			"130px",
+			"intro",
+			"moduleItemComments",
+			"review",
+			"tab-review",
+			".menu-main-menu-container ul li a",
+			".primary-navigation li#menu-item-442",
+			"media",
+			"#review",
+			"$this->data['products'][] = array(",
+			"$categories = $this->model_catalog_product->getCategories($product_id);",
+			"$this->data['text_select'] = $this->language->get('text_select');",
+			"full",
+			"jq17",
+			"<<",
+			"\n<<<<<<< HEAD",
+			"jq17",
+			"$",
+			"section",
+			"$",
+			"Top primary menu",
+			"localScroll",
+			"media",
+			"$",
+			"<?php echo get_template_directory_uri() ?>",
+			" . '/minc-theme/"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"0.1s;",
+			"0.3s;",
+			"0.3s",
+			"0.5s",
+			"",
+			" <hr class=\"c\">",
+			"mask",
+			".masks",
+			".radial-progress .circle .masks",
+			"",
+			"http://localhost/liveout/",
+			"col-xs-12 col-md-4 col-sm-4 ",
+			"<span class=\"number\">500 new stories</span>",
+			" <div class=\"name\"><a href=\"javascript:void(0)\">Kyrie Irving</a></div>",
+			"jQuery",
+			"<?php echo get_template_directory_uri() ?>/",
+			"",
+			"src=\"<?php echo get_template_directory_uri() ?> . '/minc-theme/",
+			"images/",
+			"homesection",
+			"home section ",
+			"By: Trung Jimmy",
+			"DIENMAYNHANVIET",
+			"#eb9629",
+			"/home/die58346/public_html"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "html/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5462,
+								5462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5817.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "html/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								650,
+								650
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Computer/Downloads/fancyapps-fancyBox-v2.1.5-0-ge2248f4/fancyapps-fancyBox-18d1712/demo/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1445,
+								1471
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 66.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "html/js/theme_trust.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3200,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2890,
+								2890
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2178.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "html/css/jquery.fancybox.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5940.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"project": "story-wise.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 35.0,
+		"selected_items":
+		[
+		],
+		"width": 552.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 392.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

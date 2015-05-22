@@ -107,14 +107,31 @@ function projectThumbInit() {
 	
 jQuery.noConflict();
 jQuery(document).ready(function(){
-	
+	jQuery('.fancybox').fancybox();
+	jQuery('.fancybox-media').attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
 	if(!isMobile()) {
 		jQuery(window).scroll(function() {	      
 	       scrollBanner();	      
 		});
 	}
+	jQuery('.toggle-mobile').click(function(){
+		jQuery(this).next().toggleClass('active');
+	})
 	projectThumbInit();	
 	projectFilterInit();
-	jQuery(".videoContainer").fitVids();
-	jQuery("#homeBanner .op").fitText(1.7, { minFontSize: '24px', maxFontSize: '64px' });	
+	//jQuery(".videoContainer").fitVids();
+	//jQuery("#homeBanner .op").fitText(1.7, { minFontSize: '24px', maxFontSize: '64px' });	
+
 });
