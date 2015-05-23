@@ -51,6 +51,7 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
+	<?php echo wpfai_social(); ?>
 		<?php if ( comments_open() && ! is_single() ) : ?>
 			<div class="comments-link">
 				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'twentythirteen' ) . '</span>', __( 'One comment so far', 'twentythirteen' ), __( 'View all % comments', 'twentythirteen' ) ); ?>

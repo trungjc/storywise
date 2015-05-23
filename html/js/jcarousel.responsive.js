@@ -1,7 +1,7 @@
 (function($) {
     $(function() {
         var jcarousel = $('.jcarousel');
-
+         var item= 3;
         jcarousel
             .on('jcarousel:reload jcarousel:create', function () {
                 var carousel = $(this),
@@ -15,8 +15,10 @@
 
                 carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
             })
+           
             .jcarousel({
-                wrap: 'circular'
+                wrap: 'circular',
+               scroll: 2
             });
 
         $('.jcarousel-control-prev')

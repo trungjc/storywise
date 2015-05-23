@@ -13,6 +13,13 @@
 	margin:0;
 	padding: 0;
 }
+
+h2 ,h3,h1,h4{
+	font-weight: 500;
+}
+h2 {
+	font-size: 24px;
+}
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -294,21 +301,46 @@ img {
 	text-align: center;
 }
 
+.right-form  .social .facebook a{
+	background-position: 0px -1px
+}
+.right-form  .social .facebook a:hover{
+	background-position: 0px -44px;
+}
+
+
+.right-form .social .twiiter a{
+	background-position: -63px -1px 
+}
+.right-form .social .twiiter a:hover{
+	background-position: -63px -44px;
+}
+.right-form .social .youtube a{
+	background-position: -126px  -1px
+}
+.right-form .social .youtube a:hover{
+	background-position: -126px -44px;
+}
+
+
 .social a  span {display: none;}
 
 .social .facebook a{
 	background-position: 0px -44px;
-}.social .facebook a:hover{
+}
+.social .facebook a:hover{
 	background-position: 0px -1px
 }
 .social .twiiter a{
 	background-position: -63px -44px;
-}.social .twiiter a:hover{
+}
+.social .twiiter a:hover{
 	background-position: -63px -1px
 }
 .social .youtube a{
 	background-position: -126px -44px;
-}.social .youtube a:hover{
+}
+.social .youtube a:hover{
 	background-position: -126px  -1px
 }
 
@@ -334,36 +366,14 @@ img {
 	display: block;
 	float: left;
 	margin: 0 6px;
--webkit-transition: all 0.5s ease 0.3s;
-	-moz-transition: all 0.5s ease 0.3s;
-	transition: all 0.5s ease 0.3s;
-}
-.jcarousel  ul li:hover:after {
-	display: block;
-	opacity: 1;
-}
-.jcarousel  ul li:after {
-	background: rgba(0, 202, 204, 0.8) ;
-    border: 4px solid #ffbe00;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    content: "";
-    display: none;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-	-webkit-transition: all 0.5s ease 0.1s;
-	-moz-transition: all 0.5s ease 0.1s;
-	transition: all 0.5s ease 0.1s;
 }
 .jcarousel  ul li a {
-	position: relative;z-index: 2;
 }
 .site-main {
+	padding: 25px 0 50px;
+}
+
+.home .site-main {
 	padding: 25px 0;
 }
 
@@ -378,11 +388,11 @@ img {
     width: 340px;line-height: 20px;
 
 }
-.about .banner {
+.withbg.banner {
 	position: relative;
 }
 
-.about .banner:after{display: block;content: "";
+.withbg.banner:after{display: block;content: "";
 	background: url(images/bg-banner.png) repeat-x left bottom;
 	position: absolute;
 	height: 18px;
@@ -390,8 +400,230 @@ img {
 	bottom: 0;
 	left: 0;
 }
-/*responsive*/
+.free-wall {
+	margin: 15px;
+}
 
+.play-icon:after {
+    border-color: transparent transparent transparent white;
+    border-style: solid;
+    border-width: 10px;
+    content: "";
+    display: block;
+    height: 0;
+    left: 22px;
+    position: absolute;
+    top: 14px;
+    width: 0;
+}
+.free-wall a {
+	z-index: 4
+}
+.play-c:hover .mask-layer {
+	display: block; opacity: 1;
+}
+.play-c .play-icon,.play-icon {
+	cursor: pointer;
+    background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+    border-radius: 50%;
+    display: block;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    top: 50%;
+    width: 50px;z-index: 2;
+}
+.mask-layer {
+	 background:rgba(0, 202, 204, 0.8) none repeat scroll 0 0;
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  opacity: 0;
+	-webkit-transition: all 0.5s ease 0.1s;
+	-moz-transition: all 0.5s ease 0.1s;
+	transition: all 0.5s ease 0.1s;
+	  z-index: 1;
+}
+.cell:hover .project-detail {
+	display: block !important;
+    text-align: center;
+    width: 100%;
+}
+.content p {
+	margin-bottom: 15px;
+}
+.project-detail  {
+    bottom: 0;
+    display: none;z-index: 3;
+    position: absolute;
+    text-align: center;
+}
+.project-detail p {
+	display: none;
+}
+.cell {
+	background-size: cover;background-position: center center;
+    background-repeat: no-repeat;
+    border:1px solid  #ffbe00;
+}
+.free-wall a {
+	display: block;
+	position: relative;
+	width: 100%;height: 100%;
+}
+.package  {
+	
+}
+.package .column {
+	float: left;
+	width:220px;
+	margin: 30px 5px;
+	background: #3ad5db;text-align: center;
+	padding: 20px 20px 50px;
+	border-radius: 110px 110px 0 0;
+	-webkit-transition: all 0.5s ease 0.1s;
+	-moz-transition: all 0.5s ease 0.1s;
+	transition: all 0.5s ease 0.1s;
+	
+}
+.package .column p{
+	color: white;    line-height: 24px;
+}
+.package .column h2 {
+	border-radius: 50%;
+	background: white;
+	border:2px solid #ffbe00;
+	height: 178px;width: 178px;text-align: center;
+	line-height: 178px;
+	margin:0 0 35px ;
+	cursor: pointer;
+}
+.package.content > h2 {
+    margin-bottom: 20px;
+}
+.package .column.active h2 {
+	border-width: 10px;line-height: 160px;
+}
+
+
+.package .column.active,.package .column:hover {
+        margin-top: -10px;
+    padding-bottom: 90px;
+}
+.package .column:nth-child(2){
+	background: #55b538
+}.package .column:nth-child(3){
+	background: #fe652b
+}.package .column:nth-child(4){
+	background: #1ba7ff
+}
+.button ,.wpcf7-submit,.more-link{
+	background-color: #ffbe00;
+	color: white;font-size: 24px;
+	padding: 12px 60px
+}
+ .more-link  {
+ 	display: block;
+	width: 240px;
+ 	margin: 20px auto;
+ }
+.toggle-mobile {
+		display: none;
+	}
+.contact-form input.wpcf7-form-control,.contact-form textarea.wpcf7-form-control {
+	height: 26px;
+	padding: 0 10px;
+	width: 100%;
+	border: 1px solid #ffbe00;
+	margin-top: 5px;
+}	
+.contact-form input.wpcf7-submit {
+	height: auto;width: auto;
+	padding: 12px 56px;
+}
+.contact-form textarea.wpcf7-form-control  {
+	height: 124px;
+}
+.wpcf7-form p {
+	margin-bottom: 28px;
+}
+.radio-group {display: none}
+h2 ,h3{
+	margin-bottom: 12px;
+}
+.category-layout {
+	margin: 0 auto;
+	width: 90%;
+}
+.entry-meta {
+	overflow: hidden;
+}
+.wpfai-list {
+	float: right;
+}
+.wpfai-list li .wpfai-link  .fa {
+	font-size: 20px;
+}
+.wpfai-list li .wpfai-link {
+	color: #3a4656;
+}
+.wpfai-list li {
+	float: left;
+	margin: 0 6px;
+	width: 32px;height: 32px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	background: #dce8e6;
+	  -webkit-transition: all 0.5s ease 0.1s;
+	  -moz-transition: all 0.5s ease 0.1s;
+	  transition: all 0.5s ease 0.1s;
+}
+.wpfai-list li:hover {
+	background: #ffbe00;
+}
+.entry-content p {
+	line-height: 22px;
+}
+.entry-title  {
+	font-size: 24px;font-weight: normal;
+	padding: 12px;
+}
+.entry-title  a {
+	color: #15324d;
+}
+.category-layout  .entry-thumbnail img {
+	width: 100%;
+}
+footer.entry-meta ,.entry-content{
+	padding: 12px;
+}
+.entry-date {
+	font-size: 16px;color: #15324d;
+}
+.post {
+	margin-bottom: 35px;
+	margin-top: 35px;
+	border: 1px solid #ffbe00;
+}
+.comments-link a {
+	color: #15324d;
+}
+@media(min-width: 768px){
+	.contact-form {
+	float: left;
+	width: 436px;
+}
+.right-form {
+	float: left;
+    margin-left: 84px;
+}
+}
+.social  li.facebook {
+	margin-left: 0
+}
+/*responsive*/
 @media (max-width: 1024px) {
 	.container {
 	    margin: 0 auto;
@@ -413,12 +645,26 @@ img {
 	.jcarousel ul li img {
 		border: none;
 	}
+
+	.package.content {
+	    margin: 0 auto;
+	    width: 466px;
+	}
 }
-	.toggle-mobile {
-		display: none;
+	@media (max-width: 510px) {
+		.package.content {
+	   		 width: auto;
+		}
+		.package .column {
+		float: none;
+				margin: 20px auto;
+			}
 	}
 
 @media (max-width: 768px) {
+	#homeBanner {
+		height: 350px;
+	}
 	.about-body p.information {
 		position: static;text-align: center;
     width: auto;
@@ -450,18 +696,29 @@ img {
 		float: none;text-align: center;
 		display: block;
 	}
+	.menu li a {
+		 border: 1px solid #ffbe00;
+		 margin: -1px 0;
+	}
 	.container {
 	    margin: 0 auto;
 	    width: 80%;
 	}
 	#bannerText h1 {
-	    font-size: 28px;
+	    font-size: 24Wpx;
 	     margin-left:0;
 	}
 
 	#bannerText h2 {
-	    font-size: 26px;
+	    font-size: 20px;
 	    margin-left:0; 
+	}
+	.play {
+		    background: rgba(0, 0, 0, 0) url("images/play-icon.png") no-repeat scroll left top / 100% auto;
+		   
+		    height: 50px;
+		    margin-top: 55px;
+		    width: 50px;
 	}
 	.item-post {
 	    float: none;
@@ -473,15 +730,30 @@ img {
 	.logo.pull-left {
 		float: none; text-align: center;
 	}
+	#bannerText {padding-top: 20px }
+	.radio-group {
+		display: block;
+	}
+	.radio-group br {
+		margin-bottom: 10px;display: block;
+	}
+	.package.content {
+		display: none;
+	}
 }
 @media (max-width: 480px) {
+	.package.content {
+	    margin: 0 auto;
+	    width: auto;
+	}
 	
+	#bannerText {padding-top: 0 }
 	.left-footer,.right-footer {
 	    float: none;
 	    margin: 10px 0;
 	    text-align: center;
 	}
-	.social {
+	.right-footer  .social {
 	    margin: 0 auto;
 	    overflow: hidden;
 	    width: 194px;

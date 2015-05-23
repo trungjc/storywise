@@ -98,6 +98,19 @@ function projectThumbInit() {
     jQuery('#homeBanner').css({
       'background-position' : 'center ' + (-scrollPos/8)+"px"
     });    
+      jQuery('.radio-group input[value=BASIC]').attr('checked',true);
+     jQuery('.your-package .column  h2').on('click',function(){
+     	var thiz= jQuery(this).parent();
+     	jQuery('.your-package .column').removeClass('active');
+     	thiz.addClass('active');
+     	var value= thiz.attr('data-value');
+     	 jQuery('.radio-group input').each(function(i,index){
+     	 	if(index.value==value) {
+     	 		index.checked=true;
+     	 	}
+     	 });
+     	
+     });    
   }
 
 
