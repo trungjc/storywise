@@ -4,24 +4,44 @@
 		"selected_items":
 		[
 			[
+				"marg",
+				"margin"
+			],
+			[
+				"border-bo",
+				"border-bottom"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"the_t",
+				"the_title"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
 				"par",
 				"parent"
 			],
 			[
-				"pad",
-				"padding-top"
-			],
-			[
-				"mar",
-				"margin-bottom"
-			],
-			[
 				"margin",
 				"margin-left"
-			],
-			[
-				"margi",
-				"margin-top"
 			],
 			[
 				"col",
@@ -30,10 +50,6 @@
 			[
 				"padd",
 				"padding"
-			],
-			[
-				"marg",
-				"margin-bottom"
 			],
 			[
 				"z",
@@ -84,10 +100,6 @@
 				"inline-block"
 			],
 			[
-				"bac",
-				"background-color"
-			],
-			[
 				"text-",
 				"text-transform"
 			],
@@ -102,10 +114,6 @@
 			[
 				"list-s",
 				"list-style"
-			],
-			[
-				"font",
-				"font-family"
 			],
 			[
 				"backgr",
@@ -223,6 +231,86 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "wp-content/themes/twentythirteen/category-portfolio.php",
+			"settings":
+			{
+				"buffer_size": 3115,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-admin/css/login-rtl.min.css",
+			"settings":
+			{
+				"buffer_size": 21587,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-admin/css/login.min.css",
+			"settings":
+			{
+				"buffer_size": 21929,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-admin/css/wp-admin.min.css",
+			"settings":
+			{
+				"buffer_size": 222209,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "html/portfolio.html",
+			"settings":
+			{
+				"buffer_size": 11975,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/twentythirteen/header.php",
+			"settings":
+			{
+				"buffer_size": 2205,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/twentythirteen/index.php",
+			"settings":
+			{
+				"buffer_size": 2462,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/twentythirteen/style.css",
+			"settings":
+			{
+				"buffer_size": 22402,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/twentythirteen/content.php",
+			"settings":
+			{
+				"buffer_size": 2658,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/twentythirteen/footer.php",
+			"settings":
+			{
+				"buffer_size": 929,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -239,7 +327,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 512.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -261,21 +349,52 @@
 	},
 	"expanded_folders":
 	[
+		"/D/xampp/htdocs/storywise",
 		"/D/xampp/htdocs/storywise/html",
+		"/D/xampp/htdocs/storywise/html/css",
 		"/D/xampp/htdocs/storywise/html/images",
-		"/D/xampp/htdocs/storywise/html/js"
+		"/D/xampp/htdocs/storywise/html/js",
+		"/D/xampp/htdocs/storywise/wp-admin",
+		"/D/xampp/htdocs/storywise/wp-admin/css",
+		"/D/xampp/htdocs/storywise/wp-content",
+		"/D/xampp/htdocs/storywise/wp-content/plugins",
+		"/D/xampp/htdocs/storywise/wp-content/plugins/list-post",
+		"/D/xampp/htdocs/storywise/wp-content/themes",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/css",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/js"
 	],
 	"file_history":
 	[
-		"/D/xampp/htdocs/storywise/html/style.css",
-		"/D/xampp/htdocs/storywise/html/about.html",
-		"/D/xampp/htdocs/storywise/html/blog.html",
-		"/D/xampp/htdocs/storywise/html/js/theme_trust.js",
-		"/D/xampp/htdocs/storywise/html/contact.html",
-		"/D/xampp/htdocs/storywise/html/js/jcarousel.responsive.js",
-		"/D/xampp/htdocs/storywise/html/index.html",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/author.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/page.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/single.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/category.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/archive.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/tag.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/header.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/footer.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/style.css",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/category-portfolio.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/page-32.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/page-2.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/functions.php",
+		"/D/xampp/htdocs/pistil/PISTIL Landing Pages/samples/template/custom.css",
+		"/D/xampp/htdocs/pistil/PISTIL Landing Pages/samples/template/signup.html",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/content.php",
+		"/D/xampp/htdocs/grady-sports-media/wp-content/themes/startup/functions.php",
+		"/D/xampp/htdocs/grady-sports-media/wp-content/themes/startup/index.php",
+		"/D/xampp/htdocs/storywise/wp-content/themes/twentythirteen/index.php",
 		"/D/xampp/htdocs/storywise/html/portfolio.html",
 		"/D/xampp/htdocs/storywise/html/package.html",
+		"/D/xampp/htdocs/storywise/html/index.html",
+		"/D/xampp/htdocs/storywise/html/contact.html",
+		"/D/xampp/htdocs/storywise/html/js/theme_trust.js",
+		"/D/xampp/htdocs/storywise/html/blog.html",
+		"/D/xampp/htdocs/storywise/html/style.css",
+		"/D/xampp/htdocs/storywise/wp-content/plugins/list-post/post-listing-shortcode.php",
+		"/D/xampp/htdocs/storywise/html/about.html",
+		"/D/xampp/htdocs/storywise/html/js/jcarousel.responsive.js",
 		"/C/Users/Computer/Downloads/fancyapps-fancyBox-v2.1.5-0-ge2248f4/fancyapps-fancyBox-18d1712/demo/index.html",
 		"/D/xampp/htdocs/storywise/html/porfolio.html",
 		"/D/xampp/htdocs/storywise/html/css/jquery.fancybox.css",
@@ -374,31 +493,11 @@
 		"/D/xampp/htdocs/leadingteams/configuration.php",
 		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/leadingteams/template/product/category.tpl",
 		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/vqmod/xml/Prev_Next_Product.xml",
-		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/controller/product/category.php",
-		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/leadingteams/template/product/product.tpl",
-		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/controller/product/product.php",
-		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/default/template/product/category.tpl",
-		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/view/theme/leadingteams/template/common/header.tpl",
-		"/C/Users/Computer/Downloads/jQuery-Parallax-master(1)/jQuery-Parallax-master/index.html",
-		"/D/xampp/htdocs/infowrap/assets/js/main.js",
-		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/jquery.scrollTo-1.4.2-min.js",
-		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/jquery.parallax-1.1.3.js",
-		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/jquery.localscroll-1.2.7-min.js",
-		"/D/xampp/htdocs/leadingteams/components/com_easyblog/themes/dashboard/system/media.browser.tree-item.ejs",
-		"/D/xampp/htdocs/minc/wp-admin/ms-edit.php",
-		"/D/xampp/htdocs/minc/wp-content/plugins/post-types-order/post-types-order.php",
-		"/D/xampp/htdocs/slices/wp-content/themes/slices-theme/page-locations.php",
-		"/D/xampp/htdocs/minc/wp-content/themes/twentyfourteen/functions.php",
-		"/C/Users/Computer/Desktop/Parallax Demo_files/New folder/jQuery Parallax Plugin Demo.htm",
-		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/backgrounds.js",
-		"/D/xampp/htdocs/minc/wp-content/themes/minc-theme/js/kinetics.js",
-		"/D/xampp/htdocs/slices/wp-content/themes/slices-theme/slices/slices-functions.php",
-		"/D/xampp/htdocs/nhanviet/catalog/view/theme/pav_queenbeauty/stylesheet/stylesheet.css",
-		"/D/xampp/htdocs/nhanviet/admin/view/stylesheet/stylesheet.css"
+		"/D/xampp/htdocs/leadingteams/components/com_mijoshop/opencart/catalog/controller/product/category.php"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -418,6 +517,35 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".nav-menu li.last-child, .nav-menu li:last-child",
+			".post",
+			".entry-header .entry-meta",
+			"comment",
+			"input,textarea",
+			"button",
+			".package .column p",
+			".entry-title",
+			".jcarousel ul li img",
+			"body #mc_embed_signup .mc-field-group label",
+			".nav-menu li.last-child",
+			".nav-menu li.last-child, .nav-menu li:last-child",
+			".home .site-main",
+			".item-post a:after",
+			"Continue reading ",
+			"more-link",
+			".nav-menu li.last-child",
+			".nav-menu li.last-child, .nav-menu li:last-child",
+			".site-header",
+			".nav-menu li.last-child ",
+			".last-child",
+			".comment-list",
+			"For companies, mostly start-ups, looking for cost-effective yet high quality explainer ideos to market their product or service. ",
+			"Leave a comment",
+			".post",
+			"Continue reading ",
+			"<span class=\"screen-reader-text\">Test3</span> <span class=\"meta-nav\">→</span>",
+			".button",
+			"html",
 			"social",
 			".site-main",
 			"contact-body",
@@ -516,36 +644,7 @@
 			"wordpress",
 			"entry-footer",
 			"></",
-			"more-link",
-			"screen-reader-text",
-			".media-body",
-			"the_archive_title",
-			" .site-content",
-			".woocommerce-page",
-			".js",
-			"functions.js",
-			"function.js",
-			"common",
-			"entry-content",
-			"blog-footer",
-			"improved",
-			"one-third column",
-			" Fanbase.showTopMenu();",
-			"var CTAbutton = \"div#banner div.subscriber .btn\";",
-			"12px",
-			">\n",
-			".pinned",
-			"pinned",
-			"fa",
-			"Heavy",
-			"<span>500 new stories</span>",
-			" <div class=\"name\">Kyrie Irving</div>",
-			";\n",
-			"visible",
-			";}",
-			"$helvetica",
-			"$base-font-family",
-			"primary-navigation"
+			"more-link"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -553,6 +652,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			".nav-menu li.last-child ,.nav-menu li:last-child ",
+			"For companies, mostly start-ups, looking for cost-effective yet high quality explainer ideos to market their product or service. For companies, mostly start-ups, looking for cost-effective yet high quality explainer ideos to market their product or service. For companies, mostly start-ups, looking for cost-effective yet high quality explainer ideos to market their product or service. ",
+			"3 comments",
+			"Read more",
+			"",
 			"margin:5px 0 5px 0",
 			"margin:0 0 15px 0",
 			"<div class=\"mask-layer\"><a class=\"play-icon\"></a></div>",
@@ -599,14 +703,302 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "wp-content/themes/twentythirteen/category-portfolio.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1527,
+								1527
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 475.0,
+						"translation.y": 260.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wp-admin/css/login-rtl.min.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21587,
+								21587
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-admin/css/login.min.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21929,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21927,
+								21927
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-admin/css/wp-admin.min.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 222209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								222209,
+								222209
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 10.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "html/portfolio.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11086,
+								11967
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7326.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/twentythirteen/header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1400,
+								1400
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 528.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/twentythirteen/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2462,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2438,
+								2438
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "wp-content/themes/twentythirteen/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9854,
+								9854
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 11735.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "wp-content/themes/twentythirteen/content.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								914,
+								914
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 194.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "wp-content/themes/twentythirteen/footer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 929,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								913,
+								913
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 345.0,
+						"translation.y": 396.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -642,7 +1034,7 @@
 	"project": "story-wise.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -677,7 +1069,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 227.0,
+	"side_bar_width": 417.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
