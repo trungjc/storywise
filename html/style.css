@@ -568,6 +568,9 @@ h2 ,h3{
 .wpfai-list li .wpfai-link {
 	color: #3a4656;
 }
+.comments-link {
+    margin-top: 15px;
+}
 .wpfai-list li {
 	float: left;
 	margin: 0 6px;

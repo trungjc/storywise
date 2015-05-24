@@ -53,15 +53,7 @@ Quote</a></li>
 <div class="site-main">
 	<div class="container">
 		<div id="freewall" class="free-wall">
-				<div style="width: 205px; height: 205px; background-image: url('images/portfolio/30.jpg');" class="cell play-c">
-					<div class="mask-layer"><a class="play-icon"></a></div>
-					<a rel="media-project" class="fancybox-media-project" href="https://vimeo.com/channels/staffpicks/128252959"></a>
-					<div class="project-detail" style="display:none;color:white">
-						<h2 style="color:white;margin:5px 0 5px 0;font-weight:400">The project name</h2>
-						<p style="color:white;">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sit, repellat assumenda excepturi minima debitis atque nulla quibusdam iste eligendi voluptas, obcaecati nihil necessitatibus vel illum itaque ea molestias vero!
-						</p>
-					</div>
-				</div>	
+					
 				<div style="width: 205px; height: 205px; background-image: url('images/portfolio/32.jpg');" class="cell play-c"><div class="mask-layer"><a class="play-icon"></a></div>
 					<a rel="media-project" class="fancybox-media-project" href="https://vimeo.com/channels/staffpicks/128029054"></a>
 					<div class="project-detail" style="display:none;color:white">
@@ -150,7 +142,16 @@ Quote</a></li>
 					<a rel="media-project" class="fancybox-media-project" href="https://vimeo.com/channels/staffpicks/128029054"></a>
 					<div class="project-detail" style="display:none;color:white">
 						<h2 style="color:white;margin:5px 0 5px 0;font-weight:400">The project name</h2>
-						<p style="color:white;">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sit, repellat assumenda excepturi minima debitis atque nulla quibusdam iste eligendi voluptas, obcaecati nihil necessitatibus vel illum itaque ea molestias vero!
+						<p style="color:white;">
+						<?php
+								/* translators: %s: Name of current post */
+								the_content( sprintf(
+									__( 'Read More', 'twentythirteen' ),
+									the_title( '<span class="screen-reader-text">', '</span>', false )
+								) );
+
+								wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) );
+							?>
 						</p>
 					</div>
 				</div>	

@@ -12,9 +12,9 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<div id="primary" class="site-main">
+		<div id="content" class="container" role="main">
+<div class="category-layout">
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
@@ -36,6 +36,7 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
 
+		</div><!-- #content -->
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

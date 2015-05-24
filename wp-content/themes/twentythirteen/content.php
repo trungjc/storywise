@@ -11,26 +11,38 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<header class="entry-header">
+				
+		<div class="clearfix">		
+		<?php if (! is_single() ) : ?>
+		<div class="entry-meta pull-right">
+			<?php twentythirteen_entry_meta(); ?>
+			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
+		</div><!-- .entry-meta -->
+		<?php endif; // is_single() ?>
+		<?php if ( is_single() ) : ?>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php else : ?>
+			<h1 class="entry-title">
+				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+			</h1>
+		<?php endif; // is_single() ?>
+		<?php if (is_single() ) : ?>
+		<div class="entry-meta ">
+			<?php twentythirteen_entry_meta(); ?>
+			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
+		</div><!-- .entry-meta -->
+		<?php endif; // is_single() ?>	
+			
+		</div>
 		<?php if ( has_post_thumbnail() && ! post_password_required() && ! is_attachment() ) : ?>
 		<div class="entry-thumbnail">
 			<?php the_post_thumbnail(); ?>
 		</div>
 		<?php endif; ?>
-
-		<?php if ( is_single() ) : ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<?php else : ?>
-		<h1 class="entry-title">
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-		</h1>
-		<?php endif; // is_single() ?>
-
-		<div class="entry-meta">
-			<?php twentythirteen_entry_meta(); ?>
-			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+		
+		
+	</header>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
@@ -41,7 +53,7 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentythirteen' ),
+				__( 'Read More', 'twentythirteen' ),
 				the_title( '<span class="screen-reader-text">', '</span>', false )
 			) );
 

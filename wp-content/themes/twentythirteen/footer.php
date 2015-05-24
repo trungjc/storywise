@@ -9,18 +9,27 @@
  * @since Twenty Thirteen 1.0
  */
 ?>
-
-		</div><!-- #main -->
+		
+	
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php get_sidebar( 'main' ); ?>
-
-			<div class="site-info">
-				<?php do_action( 'twentythirteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentythirteen' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentythirteen' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentythirteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
-
+		<div class="container">
+			<div class="clearfix footer-inner ">
+				<div class="left-footer pull-left">
+				<?php get_sidebar( 'main' ); ?>
+					
+				</div>
+				<div class="right-footer pull-right">
+					<ul class="social">
+						<li class="facebook"><a href=""><span>facebook</span></a></li>
+						<li class="twiiter"><a href=""><span>twitter </span></a></li>
+						<li class="youtube"><a href=""><span>youtube</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<?php wp_footer(); ?>
+	
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/theme_trust.js"></script>
 </body>
 </html>

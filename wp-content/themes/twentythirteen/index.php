@@ -16,23 +16,62 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-		<?php if ( have_posts() ) : ?>
+<?php
+$args = array( 'post_type' => 'home-section', 'posts_per_page' => -1 );
+$loop = new WP_Query( $args );
+?>
+<?php while ($loop->have_posts() ) : $loop->the_post()?>
+    <?php if (has_post_thumbnail($post->ID)) { ?>
+        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'full')); ?>
+        <?php
+        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full");
+        $class ='has-bg';
+        $style = "background: url('" . $image[0] . "') no-repeat center center fixed; background-attachment: fixed; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; "    ?>
+        <?php
+    } else {
+        $style = "";
+    }
+    ?>
+     <?php
+        if ($post->ID == 45) { ?>
+        <div style="<?php  echo $style ?>" class="banner" id="homeBanner">
+			<div class="container">
+				<div class="banner-inner">
+				<div id="bannerText">
+					 <?php the_content(); ?>
+					<p></p><center>
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+					<a href="<?php $key="link-video"; echo get_post_meta($post->ID, $key, true); ?>" class="fancybox-media play op "></a></center>
+					<br>
+					
+				<p></p>
+				</div>
+				</div>
+			</div>
+		</div>
 
-			<?php twentythirteen_paging_nav(); ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
+        <?php 
+    	}
+        else {
+    ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+    <div id="<?php echo the_slug(); ?>" class="section <?php echo $class ;?> "  >
+        <div class="<?php echo the_slug(); ?>-inner">
+            <div class="content">
+                <?php the_content(); ?>
+            </div>
+            
+        </div> <!--.story-->
+    </div> <!--#intro-->
 
-<?php get_sidebar(); ?>
+
+    <?php
+}
+endwhile;
+?>	
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/jcarousel.responsive.css" />
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jcarousel.responsive.js"></script>
+
 <?php get_footer(); ?>

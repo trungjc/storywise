@@ -35,7 +35,13 @@ if ( ! isset( $content_width ) )
  * Add support for a custom header image.
  */
 require get_template_directory() . '/inc/custom-header.php';
+add_action('after_setup_theme', 'remove_admin_bar');
 
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}show_admin_bar(false);
 /**
  * Twenty Thirteen only works in WordPress 3.6 or later.
  */
@@ -475,7 +481,7 @@ function twentythirteen_excerpt_more( $more ) {
 	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 			/* translators: %s: Name of current post */
-			sprintf( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentythirteen' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+			sprintf( __( ' reading %s <span class="meta-nav">&rarr;</span>', 'twentythirteen' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
 		);
 	return ' &hellip; ' . $link;
 }
@@ -550,3 +556,157 @@ function twentythirteen_customize_preview_js() {
 	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20141120', true );
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
+
+
+
+// create shortcode with parameters so that the user can define what's queried - default is to list all blog posts
+/*add_shortcode( 'list-posts', 'rmcc_post_listing_parameters_shortcode' );
+function rmcc_post_listing_parameters_shortcode( $atts ) {
+    ob_start();
+ 
+    // define attributes and their defaults
+    extract( shortcode_atts( array (
+       // 'type' => 'post',
+        'order' => 'date',
+        'orderby' => 'title',
+        'posts' => -1,
+        
+        'category' => '',
+    ), $atts ) );
+ 
+    // define query parameters based on attributes
+    $options = array(
+        //'post_type' => $type,
+        'order' => $order,
+        'orderby' => $orderby,
+        'posts_per_page' => $posts,        
+        'category_name' => $category,
+    );
+    $query = new WP_Query( $options );
+    //print_r($query);
+    // run the loop based on the query
+    if ( $query->have_posts() ) { ?>
+    <ul class="clothes-listing ">
+     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+        
+           <li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </li>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
+              </ul>
+    <?php
+        $myvariable = ob_get_clean();
+        return $myvariable;
+    }
+}
+*/
+
+// create shortcode to list all clothes which come in blue
+add_shortcode( 'list-posts', 'rmcc_post_listing_shortcode1' );
+function rmcc_post_listing_shortcode1( $atts ) {
+    ob_start();
+ 
+    // define attributes and their defaults
+    extract( shortcode_atts( array (
+       // 'type' => 'post',
+        'order' => 'date',
+        'orderby' => 'title',
+        'posts' => -1,
+        
+        'category' => '',
+    ), $atts ) );
+ 
+    // define query parameters based on attributes
+    $options = array(
+        //'post_type' => $type,
+        'order' => $order,
+        'orderby' => $orderby,
+        'posts_per_page' => $posts,        
+        'category_name' => $category,
+    );
+     $query = new WP_Query( $options );
+    if ( $query->have_posts() ) { ?>
+    <div class="container">
+    		<div class="jcarousel-wrapper">
+    				<div class="jcarousel">
+	        <ul >
+	            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+	            <li id="post-<?php the_ID(); ?>" class="play-c">
+	            	<div class="mask-layer">
+	            		<a href="https://vimeo.com/channels/staffpicks/128029054" class="fancybox-media play-icon" rel="media-gallery"></a>            	
+	            	</div>
+	                <?php if (has_post_thumbnail($post->ID)) { ?>
+			        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'full')); ?>
+			        <?php
+			        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full");
+			        $class ='has-bg';
+			        $style = "background: url('" . $image[0] . "') no-repeat center center ; -webkit-background-size: 100%; -moz-background-size: 100%;  -o-background-size: 100%;  background-size: 100%; "    ?>
+			        <?php
+			    } else {
+			        $style = "";
+			        $text="No Thumb";
+			    }
+			    ?>
+						<div class="entry-thumbnail" style="<?php  echo $style ?>">
+							<?php  echo $text ?>
+							
+						</div>
+	            </li>
+	            <?php endwhile;
+	            wp_reset_postdata(); ?>
+	        </ul>
+     </div>
+     <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-prev">‹</a>
+      <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-next">›</a>
+     </div>
+     
+     </div>
+    <?php $myvariable = ob_get_clean();
+    return $myvariable;
+    }
+}
+
+
+// Hooking up our function to theme setup
+add_action( 'init', 'create_post_type_home_section' );
+
+function the_slug() {
+    $post_data = get_post($post->ID, ARRAY_A);
+    $slug = $post_data['post_name'];
+    return $slug; 
+}
+
+function create_post_type_home_section()
+{
+    register_taxonomy_for_object_type('category', 'home-section'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'home-section');
+    register_post_type('home-section', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('home section  ', 'homesection'), // Rename these to suit
+            'singular_name' => __('home section  Post', 'homesection'),
+            'add_new' => __('Add New', 'homesection'),
+            'add_new_item' => __('Add New home section  Post', 'homesection'),
+            'edit' => __('Edit', 'homesection'),
+            'edit_item' => __('Edit home section  Post', 'homesection'),
+            'new_item' => __('New home section  Post', 'homesection'),
+            'view' => __('View home section  Post', 'homesection'),
+            'view_item' => __('View home section  Post', 'homesection'),
+            'search_items' => __('Search home section  Post', 'homesection'),
+            'not_found' => __('No home section  Posts found', 'homesection'),
+            'not_found_in_trash' => __('No home section  Posts found in Trash', 'homesection')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+             'custom-fields',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true
+    ));
+}
