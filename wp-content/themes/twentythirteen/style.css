@@ -984,7 +984,7 @@ input,textarea {
 	padding: 12px 56px;text-transform: uppercase;
 }
 .contact-form textarea.wpcf7-form-control  {
-	height: 124px;
+	height: 124px;padding: 10px;
 }
 .wpcf7-form p {
 	margin-bottom: 28px;

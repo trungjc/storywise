@@ -391,7 +391,7 @@ function wpfai_social($atts = '') {
     $classname = 'get_'.str_replace('-','_', $icon);
     
     $output .= '<li class="wpfai-list-item '. $icon .'">
-      <a href="'. str_replace($find, $replace, $wpfai_socialmedia[$icon]['link']) .'" title="'. $wpfai_socialmedia[$icon]['name'] .'" class="wpfai-'. $icon .' wpfai-link'. ($wpfai_popup == 'yes' ? ' wpfainw' : '') .'">
+      <a target="_blank" href="'. str_replace($find, $replace, $wpfai_socialmedia[$icon]['link']) .'" title="'. $wpfai_socialmedia[$icon]['name'] .'" class="wpfai-'. $icon .' wpfai-link'. ($wpfai_popup == 'yes' ? ' wpfainw' : '') .'">
         <span class="fa-stack '. ($regsize != '' ? 'fa-'. $regsize : '') .'">
           '. ($regshape != 'simple' ? '<i class="fa fa-'. $regshape .''. ($reginverse == 'yes' || (( $reginverse == 'no' && $regshape == 'circle-thin') ) ? '' : '-o') .' fa-stack-2x"></i>': '') .'
           <i class="fa fa-'. $icon .' fa-stack-1x '. ($reginverse == 'yes' ? 'fa-inverse' : '') .'"></i>
