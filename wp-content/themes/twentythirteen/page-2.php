@@ -15,8 +15,12 @@ get_header(); ?>
 	<div id="homeBanner" class="banner withbg" style="background:#b9dede ">
 		<div class="container">
 			<div class="banner-inner">
-				<div id="bannerText">
-					
+				<div id="bannerText"  class="scrolling">
+					<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+						<div class="entry-thumbnail" style="text-align:center">
+							<?php the_post_thumbnail(); ?>
+						</div>
+						<?php endif; ?>
 				</div>
 				
 				
@@ -31,11 +35,7 @@ get_header(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-						<div class="entry-thumbnail">
-							<?php the_post_thumbnail(); ?>
-						</div>
-						<?php endif; ?>
+						
 
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 					</header><!-- .entry-header -->

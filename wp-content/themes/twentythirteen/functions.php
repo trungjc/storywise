@@ -606,7 +606,7 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
 add_shortcode( 'list-posts', 'rmcc_post_listing_shortcode1' );
 function rmcc_post_listing_shortcode1( $atts ) {
     ob_start();
- 
+ global $post;
     // define attributes and their defaults
     extract( shortcode_atts( array (
        // 'type' => 'post',
@@ -634,7 +634,12 @@ function rmcc_post_listing_shortcode1( $atts ) {
 	            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 	            <li id="post-<?php the_ID(); ?>" class="play-c">
 	            	<div class="mask-layer">
-	            		<a href="https://vimeo.com/channels/staffpicks/128029054" class="fancybox-media play-icon" rel="media-gallery"></a>            	
+	            		<?php $key="link-video"; $url_video= get_post_meta($post->ID,$key, true); ?>
+	            		<a href="<?php echo $url_video;  ?>" class="fancybox-media-project play-icon" rel="media-gallery"></a>            	
+	            		<div class="project-detail" style="display:none;color:white">
+							<h2 style="color:white;padding:5px  0px 0;font-weight:400;text-transform:uppercase;  font-size: 16px;"><?php the_title(); ?></h2>
+							<div style="padding: 0px 0px 5px;color:white"><?php the_excerpt( ); ?></div>
+						</div>
 	            	</div>
 	                <?php if (has_post_thumbnail($post->ID)) { ?>
 			        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'full')); ?>

@@ -12,7 +12,17 @@
  */
 
 get_header(); ?>
-
+<div id="homeBanner" class="banner withbg" style="background:#b9dede;height:100px ">
+		<div class="container">
+			<div class="banner-inner" >
+				<div id="bannerText">
+					<h1 class="entry-title"><?php the_title(); ?></h1>
+				</div>
+				
+				
+			</div>
+		</div>
+	</div>
 	<div id="primary" class="site-main">
 		<div id="content" class="container" role="main">
 
@@ -27,7 +37,7 @@ get_header(); ?>
 						</div>
 						<?php endif; ?>
 
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+						
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">

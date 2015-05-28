@@ -17,7 +17,7 @@ function isMobile(){
 ///////////////////////////////
 // Project Filtering 
 ///////////////////////////////
-
+/*
 function projectFilterInit() {
 	jQuery('#filterNav a').click(function(){
 		var selector = jQuery(this).attr('data-filter');	
@@ -46,12 +46,12 @@ function projectFilterInit() {
 	
 		return false;
 	});		
-}
+}*/
 
 ///////////////////////////////
 // Project thumbs 
 ///////////////////////////////
-
+/*
 function projectThumbInit() {
 	
 	if(!isMobile()) {		
@@ -77,7 +77,7 @@ function projectThumbInit() {
 	}
 	
 	jQuery(".project.small").css("opacity", "1");	
-}
+}*/
 
 ///////////////////////////////
 // Parallax
@@ -89,7 +89,7 @@ function projectThumbInit() {
     scrollPos = jQuery(this).scrollTop();
 
     //Scroll and fade out the banner text
-    jQuery('#bannerText').css({
+    jQuery('#bannerText.scrolling').css({
       'margin-top' : (scrollPos/3)+"px",
       'opacity' : 1-(scrollPos/300)
     });
@@ -108,18 +108,49 @@ function projectThumbInit() {
 	
 jQuery.noConflict();
 jQuery(document).ready(function(){
-	jQuery('.fancybox').fancybox();
-	jQuery('.fancybox-media').attr('rel', 'media-gallery')
+	//jQuery('.fancybox').fancybox();
+jQuery('.fancybox-media-project')
 				.fancybox({
 					openEffect : 'none',
 					closeEffect : 'none',
 					prevEffect : 'none',
 					nextEffect : 'none',
-
+					aspectRatio:true,
 					arrows : false,
+					centerOnScroll: false,  
+					autoSize : false,
+					scrolling   : 'no',
+					top : "100px",
 					helpers : {
 						media : {},
-						buttons : {}
+						buttons : {},
+						overlay : {
+            locked : false // try changing to true and scrolling around the page
+        }
+					},
+					afterLoad : function() {
+						var inner  = this.content.parent();	//fancybox-inner
+						this.content.parents('.fancybox-skin').css('background','black');	//fancybox-inner
+						if(this.element.next('.project-detail').length) {
+							var text = jQuery('<div class="my-text" >' + this.element.next('.project-detail').html() + '</div>');
+							inner.append(text);
+						
+						var iframe = inner.find('.fancybox-iframe');
+						var timeout = function() {
+							jQuery('.fancybox-iframe').css('height', function() {
+								var inner  = jQuery(this).parent();
+								clearTimeout(window.TO);
+								return inner.height() - inner.find('.my-text').height() - 5;
+							});
+						};
+
+						window.TO = setTimeout(timeout, 200);
+						jQuery(window).resize(function() {
+							window.TO = setTimeout(timeout, 500);
+						});
+						this.content.parents('.fancybox-skin').css('background','black');
+						
+						}
 					}
 				});
 	if(!isMobile()) {
@@ -130,8 +161,8 @@ jQuery(document).ready(function(){
 	jQuery('.toggle-mobile').click(function(){
 		jQuery(this).next().toggleClass('active');
 	})
-	projectThumbInit();	
-	projectFilterInit();
+	/*projectThumbInit();	
+	projectFilterInit();*/
 	//jQuery(".videoContainer").fitVids();
 	//jQuery("#homeBanner .op").fitText(1.7, { minFontSize: '24px', maxFontSize: '64px' });	
  jQuery('.radio-group input[value=BASIC]').attr('checked',true);

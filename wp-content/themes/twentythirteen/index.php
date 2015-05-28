@@ -37,11 +37,11 @@ $loop = new WP_Query( $args );
         <div style="<?php  echo $style ?>" class="banner" id="homeBanner">
 			<div class="container">
 				<div class="banner-inner">
-				<div id="bannerText">
+				<div id="bannerText" class="scrolling">
 					 <?php the_content(); ?>
 					<p></p><center>
 
-					<a href="<?php $key="link-video"; echo get_post_meta($post->ID, $key, true); ?>" class="fancybox-media play op "></a></center>
+					<a href="<?php $key="link-video"; echo get_post_meta($post->ID, $key, true); ?>" class="fancybox-media-project play op "></a></center>
 					<br>
 					
 				<p></p>
