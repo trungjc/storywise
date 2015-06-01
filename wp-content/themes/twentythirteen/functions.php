@@ -628,11 +628,10 @@ function rmcc_post_listing_shortcode1( $atts ) {
      $query = new WP_Query( $options );
     if ( $query->have_posts() ) { ?>
     <div class="container">
-    		<div class="jcarousel-wrapper">
-    				<div class="jcarousel">
-	        <ul >
+    		<div id="featured-content" class="featured-content">
+	        <div class="slider-posts featured-post-slider">
 	            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-	            <li id="post-<?php the_ID(); ?>" class="play-c">
+	            <div id="post-<?php the_ID(); ?>" class="play-c">
 	            	<div class="mask-layer">
 	            		<?php $key="link-video"; $url_video= get_post_meta($post->ID,$key, true); ?>
 	            		<a href="<?php echo $url_video;  ?>" class="fancybox-media-project play-icon" rel="media-gallery"></a>            	
@@ -641,30 +640,23 @@ function rmcc_post_listing_shortcode1( $atts ) {
 							<div style="padding: 0px 0px 5px;color:white"><?php the_excerpt( ); ?></div>
 						</div>
 	            	</div>
-	                <?php if (has_post_thumbnail($post->ID)) { ?>
-			        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'full')); ?>
-			        <?php
-			        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full");
-			        $class ='has-bg';
-			        $style = "background: url('" . $image[0] . "') no-repeat center center ; -webkit-background-size: 100%; -moz-background-size: 100%;  -o-background-size: 100%;  background-size: 100%; "    ?>
-			        <?php
-			    } else {
-			        $style = "";
-			        $text="No Thumb";
-			    }
-			    ?>
+	              
 						<div class="entry-thumbnail" style="<?php  echo $style ?>">
-							<?php  echo $text ?>
+							  <?php if (has_post_thumbnail($post->ID)) { ?>
+						      		<?php the_post_thumbnail('full'); ?>
+						        <?php
+						    } else {
+						        $style = "";
+						        $text="No Thumb";
+						    }
+						    ?>
 							
 						</div>
-	            </li>
+	            </div>
 	            <?php endwhile;
 	            wp_reset_postdata(); ?>
-	        </ul>
-     </div>
-     <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-prev">‹</a>
-      <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-next">›</a>
-     </div>
+	        </div>
+         </div>
      
      </div>
     <?php $myvariable = ob_get_clean();

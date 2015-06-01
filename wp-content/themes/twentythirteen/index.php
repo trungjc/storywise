@@ -14,10 +14,10 @@
  * @since Twenty Thirteen 1.0
  */
 
-get_header(); ?>
+get_header();  ?>
 
 <?php
-$args = array( 'post_type' => 'home-section', 'posts_per_page' => -1 );
+$args = array( 'post_type' => 'home-section', 'posts_per_page' => -1 ,'orderby'=> 'date','order'=>'asc');
 $loop = new WP_Query( $args );
 ?>
 <?php while ($loop->have_posts() ) : $loop->the_post()?>
@@ -26,7 +26,7 @@ $loop = new WP_Query( $args );
         <?php
         $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full");
         $class ='has-bg';
-        $style = "background: url('" . $image[0] . "') no-repeat center center fixed; background-attachment: fixed; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; "    ?>
+        $style = "background-image: url('" . $image[0] . "') ;position:relative"    ?>
         <?php
     } else {
         $style = "";
@@ -34,9 +34,13 @@ $loop = new WP_Query( $args );
     ?>
      <?php
         if ($post->ID == 45) { ?>
-        <div style="<?php  echo $style ?>" class="banner" id="homeBanner">
+        <div style="<?php $style ?>" class="banner" id="homeBanner">
+            <img style="position:absolute;width:100%;height:auto;z-index:1" src="<?php echo $image[0] ?>" / >
 			<div class="container">
-				<div class="banner-inner">
+				<div class="banner-inner" style="position:relative;z-index:2">
+                <div class="video-mobile" style="display:none">
+                    <?php $key="video-mobile"; echo get_post_meta($post->ID, $key, true); ?>
+                </div>
 				<div id="bannerText" class="scrolling">
 					 <?php the_content(); ?>
 					<p></p><center>
@@ -70,8 +74,38 @@ $loop = new WP_Query( $args );
 }
 endwhile;
 ?>	
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/jcarousel.responsive.css" />
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.jcarousel.min.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jcarousel.responsive.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/slick.css" />
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
+    <script type="text/javascript" >
 
+    jQuery('.featured-post-slider').slick({
+        speed: 500,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        dots: false,
+        autoplay: true,
+            autoplaySpeed: 3000,
+        adaptiveHeight: true,
+        responsive : [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 479,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+              }
+            }
+        ]
+    });
+    </script>
+  
 <?php get_footer(); ?>

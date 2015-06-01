@@ -48,7 +48,11 @@
 				</a>
 
 			<div class="nav-menu pull-right">
-				<a class="toggle-mobile">Menu</a>
+				<a class="toggle-mobile">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
 				<div class="menu">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menus', 'menu_id' => 'primary-menu' ) ); ?>
 				

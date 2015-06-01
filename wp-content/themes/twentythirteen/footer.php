@@ -20,14 +20,14 @@
 				</div>
 				<div class="right-footer pull-right">
 					<ul class="social">
-						<li class="facebook"><a href=""><span>facebook</span></a></li>
-						<li class="twiiter"><a href=""><span>twitter </span></a></li>
-						<li class="youtube"><a href=""><span>youtube</span></a></li>
+						<li class="facebook"><a href="https://www.facebook.com/storywiseanimations"><span>facebook</span></a></li>
+						<li class="tumblr"><a href="http://storywise-animations.tumblr.com/"><span>tumblr </span></a></li>
+						<li class="youtube"><a href="https://www.youtube.com/channel/UC0LZ8Hmyln6n4lA-b9DFoAg"><span>youtube</span></a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer> 
 	<?php wp_footer(); ?>
 	
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/theme_trust.js"></script>
