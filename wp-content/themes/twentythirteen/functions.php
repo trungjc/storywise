@@ -629,7 +629,7 @@ function rmcc_post_listing_shortcode1( $atts ) {
     if ( $query->have_posts() ) { ?>
     <div class="container">
     		<div id="featured-content" class="featured-content">
-	        <div class="slider-posts featured-post-slider">
+	        <div class="slider-posts featured-post-slider clearfix">
 	            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 	            <div id="post-<?php the_ID(); ?>" class="play-c">
 	            	<div class="mask-layer">
@@ -640,16 +640,19 @@ function rmcc_post_listing_shortcode1( $atts ) {
 							<div style="padding: 0px 0px 5px;color:white"><?php the_excerpt( ); ?></div>
 						</div>
 	            	</div>
-	              
+	              <?php if (has_post_thumbnail($post->ID)) { ?>
+			        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'full')); ?>
+			        <?php
+			        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full");
+			       // $class ='has-bg';
+			        $style = "background: url('" . $image[0] . "') no-repeat center center ; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; "    ?>
+			        <?php
+			    } else {
+			        $style = "background: url('" .  get_template_directory_uri() . "/images/no-image-available.jpg') no-repeat center center ; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; ";
+			    }
+			    ?>
 						<div class="entry-thumbnail" style="<?php  echo $style ?>">
-							  <?php if (has_post_thumbnail($post->ID)) { ?>
-						      		<?php the_post_thumbnail('full'); ?>
-						        <?php
-						    } else {
-						        $style = "";
-						        $text="No Thumb";
-						    }
-						    ?>
+							 
 							
 						</div>
 	            </div>

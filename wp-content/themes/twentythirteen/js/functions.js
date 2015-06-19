@@ -18,6 +18,7 @@
 	 * than the rest of the page, to help the footer always visually clear
 	 * the sidebar.
 	 */
+	 
 	$( function() {
 		if ( body.is( '.sidebar' ) ) {
 			var sidebar   = $( '#secondary .widget-area' ),

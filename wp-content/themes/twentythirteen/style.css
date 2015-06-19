@@ -455,7 +455,9 @@ ul {
 .site-header {
 	padding: 10px 0;
 	background: none!important;
-	border-bottom: 4px solid #ffbe00;
+	border-bottom: 0px solid #ffbe00;
+	
+
 }
 .site-title {
 	line-height: 0;
@@ -477,8 +479,8 @@ ul {
 	}
 }
 .entry-thumbnail {
-    border: 3px solid #ffbe00;
-    border-radius: 3px;
+    border: 0px solid #ffbe00;
+    border-radius: 0px;
     min-height: 200px; 
     overflow: hidden;
     position: relative;
@@ -487,11 +489,12 @@ ul {
       max-width: 100%;
 }
 @media(min-width: 768px) {
-	.entry-thumbnail { min-height: 146px; }
+	.entry-thumbnail { min-height: 300px; }
 }
 .slick-slide {
 	position: relative;
-	 margin: 6px;
+	 margin: 0px;
+	 width: 33.3%;
 }
 .slick-list {
 	padding: 5px 0;
@@ -506,10 +509,7 @@ ul {
     width: 100%;
 
 }
-.featured-post-slider {
-	width: 740px;
-	margin: 0 auto
-}
+
 @media(min-width: 1400px){
 	.home  #homeBanner {
 		 -webkit-background-size: cover; 
@@ -521,16 +521,20 @@ ul {
 #bannerText {
 	padding-top: 10px
 }
+#homeBanner .container{
+	height: 100%;
+}
 #bannerText.scrolling {
    /* position: fixed;
-    */top: 150px;
+    */top: 250px;
     width: 100%;
     padding-top: 55px;
     padding-left: 44px;
+    position: absolute;
 }
 #bannerText.scrolling h1 {
 	font-size: 48px;
-	font-weight: normal;
+	font-weight: bold;
 }
 #bannerText.scrolling h2 {
 	font-size: 36px;
@@ -539,6 +543,9 @@ ul {
 .play {
   display: inline-block;
   height: 77px;
+  left: 50%;
+  top: -74px;
+  position: absolute;
   width: 77px;
   margin-top: 55px;
   background: url(images/play-icon.png) no-repeat left top;
@@ -551,7 +558,7 @@ ul {
 	opacity: 0.6;
 }
 h2.op {
-	margin-left: 152px;
+	/* margin-left: 152px; */
 }
 .nav-menu {
 	padding: 4px 136px 0 0;
@@ -584,6 +591,7 @@ h2.op {
 #latest-videos {
    padding-bottom: 70px;
     padding-top: 100px;
+   
 }
 @media(min-width: 769px) {
 
@@ -617,6 +625,7 @@ h2.op {
     float: left;
     padding: 20px;
     width: 33%;text-align: center;
+    margin-top: 30px;
 }
 
 @media(min-width: 768px){
@@ -627,8 +636,8 @@ h2.op {
 .item-post .hover {
 	text-align: center;
 	display: block;
-	 height: 190px;
-  width: 190px;
+	/*  height: 190px;
+	  width: 190px; */
   margin: 0 auto 15px auto;
   position: relative;
   -webkit-transition: all 0.5s ease 0.1s;
@@ -637,7 +646,7 @@ h2.op {
 }
 .item-post .hover:hover:after {
 	opacity: 1; 
-	display: block;
+	display: none;
 	-webkit-transition: all 0.5s ease 0.1s;
 	-moz-transition: all 0.5s ease 0.1s;
 	transition: all 0.5s ease 0.1s;
@@ -663,15 +672,21 @@ h2.op {
 	transition: all 0.5s ease 0.1s;
 }
 .item-post  img {
-	border-radius: 100%;
-	border:8px solid #ffbe00;
-	background-color: white;
+	/* border:8px solid #ffbe00; */
 	margin-bottom: 16px;
-	width: 100%;height: 100%;
-	 height: 190px;
-  width: 190px;
+	
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
 	 
+
 }
+.item-post  img:hover {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
 .item-post h2 {
 	font-size: 16px;
 	text-transform: uppercase;
@@ -679,7 +694,7 @@ h2.op {
 	font-weight: normal;
 }
 .title {
-	text-align: center;font-size: 24px;
+	font-size: 24px;
 	margin-bottom: 45px;font-weight: normal;
 }
 img {
@@ -746,27 +761,50 @@ img {
     left: auto;
      right: -48px;
 }
-
-.bottom-area {
-	background:   url(images/bg-footer.png) repeat-x left top;
-	padding-top: 18px;
-	
+.this-is-how-we-do-it-inner p:empty{
+	margin: 0;
 }
+.bottom-area {
+ 	background: #ffda5a;	
+}
+@media(min-width: 768px){
+	.bottom-area {
+ 		background: rgba(0, 0, 0, 0) url("images/last-video-bg.png") no-repeat scroll left bottom / cover ;
+   		 min-height: 600px;
+	
+	}
+}
+
 .bottom-area .inner {
-	background:  #b9dede;padding-top: 45px;padding-bottom: 40px;
+	padding-top: 45px;padding-bottom: 40px;
+	
 }
 .site-footer {
 	background-color: #2d373f;
 	color: #dce8e6;
 	padding: 10px 0;
 }
-
+.left-footer .widget-area > .widget {
+		float: left;
+		width: 23%;
+		
+}
+.left-footer .widget-title {
+		font-size: 22px;
+		color: #00cccb;
+}
+.left-footer .widget-area > .widget + .widget {
+	margin-left: 20px;
+}
+.left-footer{
+	float: none!important;color: #858585;
+}
 .site-footer .left-footer li {
-	display: inline-block;
+	display: block;
 }.site-footer .left-footer li a{
-	color: #dce8e6;
-	padding: 0 10px;font-size: 14px;
-	text-transform: uppercase;
+	color: #858585;
+	padding: 0 0px;font-size: 14px;
+	text-transform: capitalize;
 }
 .social li {
 	display: block;float: left;
@@ -783,10 +821,13 @@ img {
 	transition: all 0.5s ease 0.1s;
 }
 .left-footer {
-    margin-top: 16px;
+    margin-top: 36px;
 }
 .center {
 	text-align: center;
+}
+#nav_menu-2 {
+	padding-left: 30px;
 }
 
 .right-form  .social .facebook a{
@@ -953,7 +994,10 @@ img {
 .cell {
 	background-size: cover;background-position: center center;
     background-repeat: no-repeat;
-    border:1px solid  #ffbe00;
+    /*border:1px solid  #ffbe00;*/
+}
+.free-walls > div {
+	position: relative;
 }
 .free-wall a {
 	display: block;
@@ -1159,6 +1203,18 @@ footer.entry-meta {
 #submit {
 	margin-top: 20px
 }
+
+.fixed,.site-header {
+	/* -webkit-transition: all 1s ease-in-out;
+	  -moz-transition: all 1s ease-in-out;
+	  -o-transition: all 1s ease-in-out;
+	  transition: all 1s ease-in-out; */
+    position: fixed;
+    top: 0px;
+    left: 0;
+    background: rgba(255,255,255,0.95)!important;
+    width: 100%;z-index: 99;
+}
 @media(min-width: 768px){
 	.contact-form {
 	float: left;
@@ -1227,7 +1283,17 @@ footer.entry-meta {
     width: 22px;background: #ffbe00;
      margin: 5px 0;
 }
+
+.slider-posts > div {
+    float: left;
+    position: relative;
+    width: 33.3333%;
+}
+
+
 @media (max-width: 768px) {
+
+
 	#bannerText.scrolling {
 		padding: 10px;
 	}
@@ -1235,10 +1301,10 @@ footer.entry-meta {
 		margin: 0!important;
 		opacity:1!important;
 	}
-	.featured-post-slider {
+	/* .featured-post-slider {
 	width:70%;
 	margin: 0 auto
-}
+	} */
 		.package.content {
         width: 100%;
 }
@@ -1257,7 +1323,16 @@ footer.entry-meta {
 }
 .home #homeBanner .play  {display: none}
 }
+.slider-posts.featured-post-slider {
+    margin-bottom: 20px;
+}
 	@media (max-width: 510px) {
+		.slider-posts > div {
+    float: none;
+    margin: 10px 0;
+    position: relative;
+    width: 100%;
+}
 		.package.content {
 	   		 width: auto;
 		}
@@ -1270,6 +1345,7 @@ footer.entry-meta {
 	}
 
 @media (max-width: 768px) {
+	.title {text-align: center;}
 	#homeBanner {
 		height: 350px;
 	}

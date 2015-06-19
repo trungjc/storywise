@@ -23,7 +23,7 @@ get_header(); ?>
 	</div>
 	<div id="primary" class="site-main">
 		<div id="content" class="container" role="main">
-<div id="freewall" class="free-wall">
+<div id="freewalls" class="free-walls clearfix">
 		<?php if ( have_posts() ) : ?>
 			
 			<?php /* The loop */ ?>
@@ -33,10 +33,11 @@ get_header(); ?>
 			        <?php
 			        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full");
 			       // $class ='has-bg';
-			        $style = "width: 205px; height: 205px;background: url('" . $image[0] . "') no-repeat center center ; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; "    ?>
+			        $style = "float:left;width: 33.33%; height: 300px;background: url('" . $image[0] . "') no-repeat center center ; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; "    ?>
 			        <?php
 			    } else {
-			        $style = "width: 205px; height: 205px;";
+			             $style = "float:left;width: 33.33%; height: 300px;background: url('" .  get_template_directory_uri() . "/images/no-image-available.jpg') no-repeat center center ; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; ";
+			
 			    }
 			    ?>
 
@@ -62,9 +63,9 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/freewall.js"></script>
+<!--script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/freewall.js"></script-->
 <script type="text/javascript">
-			jQuery.noConflict();
+			/*jQuery.noConflict();
 jQuery(document).ready(function(){
 	
 				var wall = new freewall("#freewall");
@@ -83,7 +84,7 @@ jQuery(document).ready(function(){
 			
 
 })
-			
+*/			
 			
 		</script>
 <?php get_footer(); ?>

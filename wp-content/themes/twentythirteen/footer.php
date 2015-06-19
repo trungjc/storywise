@@ -18,13 +18,7 @@
 				<?php get_sidebar( 'main' ); ?>
 					
 				</div>
-				<div class="right-footer pull-right">
-					<ul class="social">
-						<li class="facebook"><a href="https://www.facebook.com/storywiseanimations"><span>facebook</span></a></li>
-						<li class="tumblr"><a href="http://storywise-animations.tumblr.com/"><span>tumblr </span></a></li>
-						<li class="youtube"><a href="https://www.youtube.com/channel/UC0LZ8Hmyln6n4lA-b9DFoAg"><span>youtube</span></a></li>
-					</ul>
-				</div>
+				
 			</div>
 		</div>
 	</footer> 

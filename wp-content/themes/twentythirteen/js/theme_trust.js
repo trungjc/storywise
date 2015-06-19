@@ -107,6 +107,15 @@ function projectThumbInit() {
 	
 jQuery.noConflict();
 jQuery(document).ready(function(){
+
+	
+	jQuery(window).on('scroll', function () {
+    if (jQuery(window).scrollTop() > 50) {
+        jQuery('.site-header').addClass('fixed');
+    } else {
+        jQuery('.site-header').removeClass('fixed');
+    }
+}); 
 	//jQuery('.fancybox').fancybox();
 jQuery('.fancybox-media-project')
 				.fancybox({

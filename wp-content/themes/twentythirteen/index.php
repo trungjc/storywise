@@ -43,10 +43,9 @@ $loop = new WP_Query( $args );
                 </div>
 				<div id="bannerText" class="scrolling">
 					 <?php the_content(); ?>
-					<p></p><center>
-
-					<a href="<?php $key="link-video"; echo get_post_meta($post->ID, $key, true); ?>" class="fancybox-media-project play op "></a></center>
-					<br>
+					<center>
+                   <a href="<?php $key="link-video"; echo get_post_meta($post->ID, $key, true); ?>" class="fancybox-media-project play op "></a></center>
+                                    
 					
 				<p></p>
 				</div>
@@ -74,7 +73,8 @@ $loop = new WP_Query( $args );
 }
 endwhile;
 ?>	
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/slick.css" />
+
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/slick.css" />
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
     <script type="text/javascript" >
 
@@ -106,6 +106,6 @@ endwhile;
             }
         ]
     });
-    </script>
+    </script> -->
   
 <?php get_footer(); ?>
