@@ -13,9 +13,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <header class="entry-header">
 				
-		<div class="clearfix">		
+		<div class="">		
 		<?php if (! is_single() ) : ?>
-		<div class="entry-meta pull-right">
+		<div class="entry-meta ">
 			<?php twentythirteen_entry_meta(); ?>
 			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
@@ -43,6 +43,8 @@
 		
 		
 	</header>
+	
+
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
@@ -50,10 +52,16 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
+	<?php $key="link-video"; $key_data= get_post_meta($post->ID,$key, true);  if($key_data != null) { ?>
+		
+	<iframe title="YouTube video player" class="youtube-player" type="text/html" 
+width="640" height="390" src="<?php echo $key_data; ?>"
+frameborder="0" allowFullScreen></iframe>
+	<?php } ?>
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Read More', 'twentythirteen' ),
+				__( 'Read the rest  --->', 'twentythirteen' ),
 				the_title( '<span class="screen-reader-text">', '</span>', false )
 			) );
 

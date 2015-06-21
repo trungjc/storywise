@@ -13,6 +13,7 @@ get_header(); ?>
 
 	<div id="primary" class="site-main">
 		<div id="content" class="container" role="main">
+		<?php get_sidebar(); ?>
 <div class="category-layout">
 		<?php if ( have_posts() ) : ?>
 			
@@ -27,8 +28,9 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
 </div><!-- #content -->
+
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

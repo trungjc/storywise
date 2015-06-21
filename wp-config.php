@@ -16,7 +16,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'storywise');
+define('DB_NAME', 'story-wise');
 
 /** MySQL database username */
 define('DB_USER', 'root');

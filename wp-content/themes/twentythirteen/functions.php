@@ -152,7 +152,7 @@ function twentythirteen_fonts_url() {
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
-		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+		//$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 	}
 
 	return $fonts_url;
@@ -179,7 +179,7 @@ function twentythirteen_scripts_styles() {
 	wp_enqueue_script( 'twentythirteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
 
 	// Add Source Sans Pro and Bitter fonts, used in the main stylesheet.
-	wp_enqueue_style( 'twentythirteen-fonts', twentythirteen_fonts_url(), array(), null );
+	//wp_enqueue_style( 'twentythirteen-fonts', twentythirteen_fonts_url(), array(), null );
 
 	// Add Genericons font, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.03' );
@@ -634,10 +634,31 @@ function rmcc_post_listing_shortcode1( $atts ) {
 	            <div id="post-<?php the_ID(); ?>" class="play-c">
 	            	<div class="mask-layer">
 	            		<?php $key="link-video"; $url_video= get_post_meta($post->ID,$key, true); ?>
-	            		<a href="<?php echo $url_video;  ?>" class="fancybox-media-project play-icon" rel="media-gallery"></a>            	
-	            		<div class="project-detail" style="display:none;color:white">
-							<h2 style="color:white;padding:5px  0px 0;font-weight:400;text-transform:uppercase;  font-size: 16px;"><?php the_title(); ?></h2>
-							<div style="padding: 0px 0px 5px;color:white"><?php the_excerpt( ); ?></div>
+	            		<?php $media="media"; $media_data= get_post_meta($post->ID,$media, true); ?>
+	            		<?php $designer="designer"; $designer_data= get_post_meta($post->ID,$designer, true); ?>
+	            		<?php $target="target-audience"; $target_data= get_post_meta($post->ID,$target, true); ?>
+	            		<a href="<?php echo $url_video;  ?>" class="fancybox-media-project detail-icon" rel="media-gallery"></a>            	
+	            		<div class="project-detail">
+							<h2 style="margin:5px 0px 5px;color:white;font-weight:400;text-transform:uppercase;  " class="title"><?php the_title(); ?></h2>
+							<div class="desc" style="color:white"><?php the_excerpt( ); ?></div>
+						</div>
+						<div class="project-more">
+							<?php if($designer_data != null) { ?>
+
+							<div class="name">
+							<h3><i>Designer</i></h3>
+							<?php echo $designer_data; ?></div>
+							<?php } ?>
+							<?php if($target_data != null) { ?>
+							<div class="target">
+							<h3><i>Target audience</i></h3>
+							<?php echo $target_data; ?></div>
+							<?php } ?>
+							<?php if($media_data != null) { ?>
+							<div class="media">
+							<h3><i>Media</i></h3>
+							<?php echo $media_data; ?></div>
+							<?php } ?>
 						</div>
 	            	</div>
 	              <?php if (has_post_thumbnail($post->ID)) { ?>
@@ -710,3 +731,52 @@ function create_post_type_home_section()
         'can_export' => true
     ));
 }
+
+// Replaces the excerpt "more" text by a link
+add_filter('the_content', 'replace_content');
+
+
+function replace_content($content)
+{
+ $search  = array('[more]','[full]','[/full]');
+  $replace = array('<a class="readmore">[read more..]</a>','<div class="full-content">','</div>');
+
+
+
+  $content = str_replace($search, $replace, $content);
+  return $content;
+}
+
+function wpb_postsbycategory() {
+// the query
+$the_query = new WP_Query( array( 'category_name' => 'blog', 'posts_per_page' => 10 ) ); 
+
+// The Loop
+if ( $the_query->have_posts() ) {
+	$string .= '<ul class="postsbycategory widget_recent_entries">';
+	while ( $the_query->have_posts() ) {
+		$the_query->the_post();
+			if ( has_post_thumbnail() ) {
+			$string .= '<li>';
+			$string .= '<a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_post_thumbnail($post_id, array( 50, 50) ) . get_the_title() .'</a></li>';
+			} else { 
+			// if no featured image is found
+			$string .= '<li><a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_title() .'</a></li>';
+			}
+			}
+	} else {
+	// no posts found
+}
+$string .= '</ul>';
+
+return $string;
+
+/* Restore original Post Data */
+wp_reset_postdata();
+}
+// Add a shortcode
+add_shortcode('categoryposts', 'wpb_postsbycategory');
+
+// Enable shortcodes in text widgets
+add_filter('widget_text', 'do_shortcode');
+

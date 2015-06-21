@@ -166,8 +166,18 @@ jQuery('.fancybox-media-project')
 	       scrollBanner();	      
 		});
 	}
-	jQuery('.toggle-mobile').click(function(){
+	jQuery('.toggle-mobile').on('click',function(){
 		jQuery(this).next().toggleClass('active');
+	});
+	jQuery('.menu a[href="#contact-form"]').on('click',function(){
+		var tem=jQuery(this).attr('href');
+		jQuery(tem).fadeIn();
+		return false;
+	});
+	jQuery('#contact-form').on('mouseleave',function(e){
+		e.stopPropagation();
+		jQuery(this).fadeOut();
+		return false;
 	})
 	/*projectThumbInit();	
 	projectFilterInit();*/

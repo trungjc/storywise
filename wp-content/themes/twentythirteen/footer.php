@@ -16,7 +16,7 @@
 			<div class="clearfix footer-inner ">
 				<div class="left-footer pull-left">
 				<?php get_sidebar( 'main' ); ?>
-					
+				<?php echo wpfai_social(); ?>	
 				</div>
 				
 			</div>
