@@ -1437,7 +1437,7 @@ footer.entry-meta {
     margin-right: 10px;
     margin-top: 8px;
 }
-.category  .post .date {
+ .post .date {
     background: #fad200;
      border-left: 10px solid #eecb00;
     display: block;
@@ -1447,7 +1447,7 @@ footer.entry-meta {
     text-align: center;
     width: 90px;
 }
-.category  .post .entry-date {
+ .post .entry-date {
    font-size: 32px;color: white;
     line-height: 38px;
 } 
@@ -1458,12 +1458,6 @@ footer.entry-meta {
 .single .post {
 	border: none;
 	border-bottom: 3px solid #ffbe00;
-}.single .post .entry-content ,.single .post .entry-title{
-	padding-left: 0;
-	padding-right: 0;
-}
-.single .post .entry-title {
-	padding: 0
 }
 .single .entry-meta > span a {
 	margin: 0 0 15px 0;
