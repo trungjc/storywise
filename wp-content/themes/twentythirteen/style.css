@@ -1,6 +1,5 @@
 a {color: #fad200}
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300);
 @font-face {
 	font-family: 'gillsansmt';
 	src: url('../fonts/33535gillsansmt.eot');
@@ -23,7 +22,7 @@ a {color: #fad200}
 .taxonomy-description h1 {
 	font-size: 50px;
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
+	font-weight: 800;
 	margin-bottom: 10px;
 }
 .taxonomy-description p {
@@ -521,7 +520,58 @@ ul {
     background-attachment: fixed;
     background-repeat: no-repeat; background-position: center ;
 }
+.help h2 {
+	color: #122e4e;
+	margin-bottom: 20px;
+}
+.help{
+	padding: 205px 0 120px 0;
+	font-weight: 600;
+	background:#dceeee
+}
+.help  .button {
+	color: #122e4e;
+	padding: 20px 40px;
+	background: #fad200!important;
+	
+	font-weight: 600;
+}
+
 @media(min-width: 768px){
+	.control-input  {
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;margin:0 0  5px 0!important;
+    color: #122e4e;
+    font-weight: 600;
+}
+.contact-form h1 {
+	 color: #122e4e;
+    font-family: "gillsansmt";
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin: 30px 0 5px;
+    text-transform: uppercase;
+}
+.contact-form input.wpcf7-submit {
+	font-size: 22px;
+	padding: 5px 25px;
+	color: #122e4e;
+	cursor: pointer;
+	font-weight: bold;font-family: 'gillsansmt';
+}
+
+	.help h2 {
+	font-size: 40px;
+}
+
+.help  .button {
+	font-size: 24px;
+}
+.help {
+	background:#dceeee url(images/help-bg.png) left top no-repeat ;
+	background-size: conver;
+}
 	.slick-slide {
 		max-width: 254px;
 	}
@@ -639,12 +689,16 @@ h2.op {
 }
 .left-footer .widget  {
 	position: static!important;
+
 }
 .more-link span {display: none;}
 #latest-videos {
    padding-bottom: 70px;
     padding-top: 100px;
    
+}
+.left-footer {
+	line-height: 24px;
 }
 @media(min-width: 769px) {
 
@@ -1042,7 +1096,7 @@ img {
 }
 .project-detail  {
   
-    padding: 10px 10px 0 10px;
+    padding: 20px 10px 0 20px;
 }
 .readmore {display: none}
 .category .readmore {
@@ -1056,7 +1110,8 @@ img {
 	  z-index: 1;
 }
 .full-content.active {
-	display: block;
+	display: block;-webkit-transition: all 0.5s ease 0.1s;
+    transition: all 0.5s ease 0.1s;
 }
 .project-more {
 	padding: 0 10px;
@@ -1118,36 +1173,39 @@ body  .fancybox-close {
 
 .package {
     margin: 0 auto;
-    width: 715px;
+}
+.package .column img {
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+}
+.package .column p {
+	line-height: 30px;
 }
 .package .column {
-    background: #3ad5db none repeat scroll 0 0;
-    border-radius: 110px 110px 0 0;
+    background: #fff none repeat scroll 0 0;
+    border:1px solid #a6a6a6;
     float: left;
-    margin: 30px 3px;
-    padding: 20px 5px 50px;
-    text-align: center;
-    min-height: 800px;
+    margin: 30px 10px;
+    padding: 0px 15px 50px;
+    min-height: 850px;
     -webkit-transition: all 0.5s ease 0.1s;
     transition: all 0.5s ease 0.1s;
-    width: 172px;
+    width: 210px;
+    color: #858585;
 }
 .banner .package .column {
 	min-height: 300px;
 }
-.package .column p{
-	color: white;    line-height: 24px;
-}
+
 .package .column h2 {
-	    background: white none repeat scroll 0 0;
-    border: 2px solid #ffbe00;
-    border-radius: 50%;
+	margin: 0 -15px 35px;
+	   font-size: 30px;
+	   height: 99px;
+	   line-height: 99px;
+	   color: #fad200;
+	   	font-family: 'Open Sans', sans-serif;
     cursor: pointer;
-    height: 140px;
-    line-height: 140px;
-    margin: 0 auto 35px;
     text-align: center;
-    width: 140px;
 }
 .package.content > h2 {
     margin-bottom: 45px;
@@ -1157,17 +1215,10 @@ body  .fancybox-close {
 }
 
 
-.package .column.active,.package .column:hover {
-        margin-top: -10px;
-    padding-bottom: 90px;
+.package .column:hover  h2{
+      background: #858585;
 }
-.package .column:nth-child(2){
-	background: #55b538
-}.package .column:nth-child(3){
-	background: #fe652b
-}.package .column:nth-child(4){
-	background: #1ba7ff
-}
+
 input,textarea {
 	border: 1px solid #ffbe00;
 }
@@ -1273,6 +1324,46 @@ a.wpfai-link {
 .wpfai-list-item.google-plus a{
 		background-position: -207px 0;
 		width: 45px;
+}
+.cu  {
+	background:  url("images/cu.png") no-repeat scroll 45px 0;
+        height: 150px;
+    left: 50%;
+    margin-left: -105px;
+    position: absolute;
+    top: -102px;
+    width: 210px;
+}
+.package .column:hover .cu{
+	 background-position: 26px bottom;
+    top: -151px;
+}
+.package .column h2 {
+	font-weight: bold;
+}
+.cu.st {
+	background-position: -190px 0;
+}
+.package .column:hover .cu.st{
+	 background-position: -190px bottom;
+    top: -151px;
+}
+.cu.pr {
+	background-position: -425px 0;
+}
+.package .column:hover .cu.pr{
+	 background-position: -424px bottom;
+    top: -151px;
+}
+.cu.ct {
+	background-position: -662px 0;
+}
+.package .column:hover ..cu.ct{
+	 background-position: -639px bottom;
+    top: -151px;
+}
+.package .column {
+	position: relative;
 }
 .wpfai-list-item.pinterest a{
 	 background-position:  -66px 0;
@@ -1404,23 +1495,43 @@ footer.entry-meta {
 	height: 300px;
 	margin: 0;
 }
+.close {
+    color: #858585;
+    font-size: 30px;
+    font-weight: 500;
+    left: 18px;
+    line-height: 10px;
+    position: absolute;
+    top: 18px;
+    cursor: pointer;
+}
+.contact-form {
+	  background: #ffbe00 none repeat scroll 0 0;
+    float: none;
+    padding: 20px;
+    position: absolute;
+    right: -162px;
+    top: 72px;
+    border-left: 10px solid #eecb00;
+    z-index: 9;
+}
+
+span.wpcf7-not-valid-tip {
+    color: #f00;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+}
 @media(min-width: 768px){
 	.free-walls .play-c {
 	float: left;
 	width: 33.333%;
 	
 }
-
-	.contact-form {
-	  background: #ffbe00 none repeat scroll 0 0;
-    float: none;
-    padding: 15px;
-    position: absolute;
-    right: -162px;
-    top: 72px;
+.contact-form {	 
     width: 436px;
-    z-index: 9;
 }
+
 .readmore {
 	cursor: pointer;
 	color: #858585;
@@ -1481,6 +1592,7 @@ footer.entry-meta {
 	    margin: 0 auto;
 	    width: 768px;
 	}
+
 	.home #bannerText {
 		display: none;
 	}
@@ -1523,6 +1635,7 @@ footer.entry-meta {
 
 @media (max-width: 768px) {
 
+
 .taxonomy-description h1 {
 	font-size: 30px;
 }
@@ -1546,8 +1659,8 @@ footer.entry-meta {
 .video-mobile {display: block!important;}
 .video-mobile iframe{width: 100%!important;}
 .package .column {
-	width: 48%;
-	border-radius: 5px 5px 0 0;
+	width: 45%;
+	margin: 170px auto!important;
 }
 .home #homeBanner {
 	background-color: #b9dede;

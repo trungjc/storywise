@@ -169,14 +169,14 @@ jQuery('.fancybox-media-project')
 	jQuery('.toggle-mobile').on('click',function(){
 		jQuery(this).next().toggleClass('active');
 	});
-	jQuery('.menu a[href="#contact-form"]').on('click',function(){
+	jQuery('.menu a[href="#contact-form"],.contact-trigger').on('click',function(){
 		var tem=jQuery(this).attr('href');
 		jQuery(tem).fadeIn();
 		return false;
 	});
-	jQuery('#contact-form').on('mouseleave',function(e){
+	jQuery('.close').on('click',function(e){
 		e.stopPropagation();
-		jQuery(this).fadeOut();
+		jQuery(this).parents('.contact-form').fadeOut();
 		return false;
 	})
 	/*projectThumbInit();	

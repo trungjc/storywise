@@ -23,7 +23,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div id="primary" class="site-main">
+	<div id="primary" class="site-main" style="padding-bottom:0">
 		<div id="content" class="container" role="main">
 
 			<?php /* The loop */ ?>
@@ -53,6 +53,12 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 		</div><!-- #content -->
+		<div class="help" >
+		<div class="container center">
+<h2>Have a project? We're here to help you create it</h2>
+<a  class="button contact-trigger" href="#contact-form">Contact Us</a>
+</div>
+</div>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -15,7 +15,7 @@ get_header(); ?>
 			<div class="banner-inner" >
 				<div id="bannerText">
 					<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
-					<hr style="margin: 20px 0;heigt:0;border:none;border-bottom:1px solid #333" />
+					<hr style="margin: 20px 0;heigt:0;border:none;border-bottom:1px solid #858585" />
 				</div>
 				
 				
@@ -55,7 +55,7 @@ get_header(); ?>
 						<a  class="mediaSource detail-icon" href="<?php $key="link-video"; echo get_post_meta($post->ID, $key, true); ?>"></a>
 					
 						<div class="project-detail" >
-							<h2 style="margin:5px 0px 5px;color:white;font-weight:400;text-transform:uppercase;  " class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+							<h2 style="margin:5px 0px 5px;color:white;font-weight:400;text-transform:uppercase;  " class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<div class="desc" style="color:white"><?php the_excerpt( ); ?></div>
 						</div>
 						<div class="project-more">
@@ -144,8 +144,6 @@ get_header(); ?>
 </div><!-- #content -->
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
-<!--script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/freewall.js"></script-->
 <script type="text/javascript">
 		jQuery.noConflict();
 		jQuery(document).ready(function(){
@@ -157,8 +155,7 @@ get_header(); ?>
 					mediaHelper.beforeLoad(mediaHelper.defaults, $source[0]);
 					var tem=jQuery(this).parents('.row');
 					var masklayer=jQuery(this).parents('.mask-layer').find('.content-post').html();
-					//console.log(masklayer);
-					//return false;
+					
 					jQuery('.mediaContainer').remove();
 					tem.before('<div class="mediaContainer row"></div>');
 					if(jQuery(this).attr('href') !='') {
@@ -176,16 +173,15 @@ get_header(); ?>
         						scrollTop: jQuery(".mediaContainer").offset().top
     					}, 1000);	
 					}
-
+				jQuery('.readmore').on('click', function(event) {
+					event.stopPropagation();
+					jQuery('.full-content').removeClass('active');	
+					jQuery('.full-content').addClass('active');	
+				});
 				
 					return false;
 				});
-			jQuery('.readmore').on('click', function(e) {
-					//e.stoppropagation();
-					alert();
-					jQuery('.full-content').removeClass('active');	
-					jQuery('.full-content').addClass('active');	
-			});
+			
 
 
 })
