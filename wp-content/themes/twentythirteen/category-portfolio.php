@@ -158,20 +158,22 @@ get_header(); ?>
 					
 					jQuery('.mediaContainer').remove();
 					tem.before('<div class="mediaContainer row"></div>');
+
 					if(jQuery(this).attr('href') !='') {
 						var ifr = "<iframe width='100%' height='450' class='inlineMedia' src='" + e.target.href + "'></iframe>";
 						jQuery('.mediaContainer').html(ifr);
+						jQuery('html, body').animate({
+        						scrollTop: jQuery(".mediaContainer").offset().top -70
+    					}, 2000);
 						jQuery('.mediaContainer').append(masklayer);
 						//var target =jQuery("mediaContainer");
-						    jQuery('html, body').animate({
-        						scrollTop: jQuery(".mediaContainer").offset().top
-    						}, 1000);
+						   
 
 					}else {
 						jQuery('.mediaContainer').html('<h1 style="text-align:center;padding:20px">no video</h1>').append(masklayer);
 						jQuery('html, body').animate({
-        						scrollTop: jQuery(".mediaContainer").offset().top
-    					}, 1000);	
+        						scrollTop: jQuery(".mediaContainer").offset().top - 70
+    					}, 2000);
 					}
 				jQuery('.readmore').on('click', function(event) {
 					event.stopPropagation();
