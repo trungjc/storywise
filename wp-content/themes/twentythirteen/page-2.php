@@ -12,32 +12,21 @@
  */
 
 get_header(); ?>
-	<div id="homeBanner" class="banner withbg" style="background:#b9dede ">
-		<div class="container">
-			<div class="banner-inner">
-				<div id="bannerText"  class="scrolling">
-					<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-						<div class="entry-thumbnail" style="text-align:center">
-							<?php the_post_thumbnail(); ?>
-						</div>
-						<?php endif; ?>
-				</div>
-				
-				
-			</div>
-		</div>
-	</div>
 	<div id="primary" class="site-main">
-		<div id="content" class="container" role="main">
+		<div id="content" class="container-about" role="main">
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-						
+						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+						<div class="entry-thumbnail">
+							<?php the_post_thumbnail(); ?>
+						</div>
+						<?php endif; ?>
 
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+						
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
@@ -54,5 +43,21 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" >
 
+    jQuery('.testimonials-slider').bxSlider({
+				minSlides: 1,
+				maxSlides: 1,
+				slideMargin: 10,
+				auto: "true",
+				pager:"true",			
+				adaptiveHeight:true,
+				controls:"false",
+				autoControls: false,
+				speed:"500",
+				mode:'fade',
+				randomStart:"false"
+			  });
+    </script>
 <?php get_footer(); ?>

@@ -74,38 +74,6 @@ $loop = new WP_Query( $args );
 endwhile;
 ?>	
 
-<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/slick.css" />
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
-    <script type="text/javascript" >
 
-    jQuery('.featured-post-slider').slick({
-        speed: 500,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 2,
-        dots: false,
-        autoplay: true,
-            autoplaySpeed: 3000,
-        adaptiveHeight: true,
-        responsive : [
-            {
-              breakpoint: 767,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-              }
-            },
-            {
-              breakpoint: 479,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-              }
-            }
-        ]
-    });
-    </script> -->
   
 <?php get_footer(); ?>

@@ -178,7 +178,20 @@ jQuery('.fancybox-media-project')
 		e.stopPropagation();
 		jQuery(this).parents('.contact-form').fadeOut();
 		return false;
-	})
+	});
+	/*jQuery('.testimonials-slider').bxSlider({
+				minSlides: 1,
+				maxSlides: 1,
+				slideMargin: 10,
+				auto:  "true",
+				pager: "true",				
+				adaptiveHeight:true,
+				controls: "true",
+				autoControls: false,
+				speed:"500",
+				mode:'fade',
+				randomStart: "false"
+			  });*/
 	/*projectThumbInit();	
 	projectFilterInit();*/
 	//jQuery(".videoContainer").fitVids();

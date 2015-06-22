@@ -13,9 +13,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <header class="entry-header">
 				
-
-		<div class="heading">		
-		<?php if (! is_single() ) : ?>
 		<div class="entry-meta ">
 		<div class="date">
 			<time  class="entry-date">
@@ -23,7 +20,7 @@
 				<span class="y"><?php echo get_the_date('Y'); ?></span>
 			</time>
 		</div>
-<?php endif; // is_single() ?>
+
 		<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		<?php else : ?>
@@ -33,19 +30,20 @@
 		<?php endif; // is_single() ?>
 		
 			
-		</div> 
+		</div>
 		
 		
 		
 	</header>
-	<?php if (! is_single() ) : ?>
+	
+
+<?php if (! is_single() ) : ?>
 	<?php if ( has_post_thumbnail() && ! post_password_required() && ! is_attachment() ) : ?>
 		<div class="entry-thumbnail">
 			<?php the_post_thumbnail(); ?>
 		</div>
 		<?php endif; ?>
-
-<?php endif; ?>
+	<?php endif; ?>
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
