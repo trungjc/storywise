@@ -1147,6 +1147,7 @@ footer.entry-meta {
 @media (max-width: 768px) {
 	#homeBanner {
 		height: 350px;
+		margin: 0;
 	}
 	.about-body p.information {
 		position: static;text-align: center;
@@ -1188,7 +1189,7 @@ footer.entry-meta {
 	    width: 80%;
 	}
 	#bannerText h1 {
-	    font-size: 24Wpx;
+	    font-size: 24px;
 	     margin-left:0;
 	}
 

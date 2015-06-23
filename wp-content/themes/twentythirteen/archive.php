@@ -10,7 +10,18 @@
  */
 
 get_header(); ?>
-
+<div id="homeBanner" class="banner withbg" style="height:auto ">
+		<div class="container">
+			<div class="banner-inner" >
+				<div id="bannerText">
+					<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
+					<hr style="margin: 20px 0;heigt:0;border:none;border-bottom:1px solid #858585" />
+				</div>
+				
+				
+			</div>
+		</div>
+	</div>
 	<div id="primary" class="site-main">
 		<div id="content" class="container" role="main">
 		<?php get_sidebar(); ?>

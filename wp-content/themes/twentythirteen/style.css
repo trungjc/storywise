@@ -30,9 +30,24 @@ a {color: #fad200}
 	font-weight: 500;
 	font-family: 'Open Sans', sans-serif;
 }
-.mediaContainer h3 {
+.mediaContainer h3{
     font-weight: bold;
-    margin: 10px 0 5px;
+    margin: 10px 0 5px; text-transform: uppercase;
+}
+.project-detail h2 {
+	 font-weight: bold!important;
+}
+.mediaContainer .col-30 h2 {
+	font-size: 16px;font-weight: bold;
+	font-style: italic;
+}
+.mediaContainer h2 ,.project-more h3 {
+	 text-transform: uppercase;
+}
+.mediaContainer h2 a {
+	  color: #00cccb;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 h1,h2,h3,h4 {
 	font-family: 'gillsansmt';
@@ -365,7 +380,7 @@ h1,h2,h3,h4 {
 .comment-form input[type="url"] {
 	max-width: 270px;
 	width: 60%;  height: 30px;
-	border: 1px solid #ffbe00;
+	border: 1px solid #fad200;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -431,9 +446,15 @@ h1,h2,h3,h4 {
 	margin:0;
 	padding: 0;
 }
-
+.form-submit .submit {
+	    background: #122e4e none repeat scroll 0 0 !important;
+    color: #fad200;cursor: pointer;
+}.form-submit .submit:hover {
+	       background: #fad200 none repeat scroll 0 0 !important;
+    color: #122e4e;
+}
 h2 ,h3,h1,h4{
-	font-weight: 500;line-height: 114%;
+	font-weight: 700;line-height: 114%;
 }
 h2 {
 	font-size: 24px;
@@ -492,7 +513,7 @@ ul {
 .site-header {
 	padding: 10px 0;
 	background: none!important;
-	border-bottom: 0px solid #ffbe00;
+	border-bottom: 0px solid #fad200;
 	
 
 }
@@ -624,7 +645,7 @@ hr
 	}
 }
 .entry-thumbnail {
-    border: 0px solid #ffbe00;
+    border: 0px solid #fad200;
     border-radius: 0px;
     min-height: 200px; 
     overflow: hidden;
@@ -680,10 +701,14 @@ hr
 #bannerText.scrolling h1 {
 	font-size: 48px;
 	font-weight: bold;
+	font-family: 'gillsansmt';
+	font-family: "Open Sans",sans-serif;
+	color: #2d373f;
 }
 #bannerText.scrolling h2 {
 	font-size: 36px;
 	font-weight: normal;
+	color: #2d373f;
 }
 .play {
   display: inline-block;
@@ -724,7 +749,7 @@ h2.op {
 
 }
 .nav-menu li:hover a,.nav-menu li.current_page_item  a{
-	border-bottom: 3px solid #ffbe00
+	border-bottom: 3px solid #fad200
 }
 .nav-menu li a:hover,.nav-menu li.current_page_item a,
 .nav-menu li.current-menu-item a {
@@ -752,7 +777,7 @@ h2.op {
 .nav-menu li.last-child ,.nav-menu li:last-child {
 	position: absolute;
 	right: 0;    top: -10px;
-	background-color: #ffbe00;
+	background-color: #fad200;
 	color: white;
 	font-size: 20px;
 	text-align: center;
@@ -808,7 +833,7 @@ h2.op {
 
 .item-post .hover:after {
 	background: rgba(0, 202, 204, 0.8) ;
-    border: 8px solid #ffbe00;
+    border: 8px solid #fad200;
     border-radius: 50%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -826,7 +851,7 @@ h2.op {
 	transition: all 0.5s ease 0.1s;
 }
 .item-post  img {
-	/* border:8px solid #ffbe00; */
+	/* border:8px solid #fad200; */
 	margin-bottom: 16px;
 	
     -webkit-transition: all 0.3s ease-out 0s;
@@ -1037,7 +1062,7 @@ img {
 	-webkit-transition: all 0.5s ease 0.3s;
 	-moz-transition: all 0.5s ease 0.3s;
 	transition: all 0.5s ease 0.3s;
-	border:3px solid #ffbe00;
+	border:3px solid #fad200;
 	width: 254px;
 	height: 146px;
 	border-radius: 3px;
@@ -1173,7 +1198,7 @@ color: #333!important
 .project-detail h2 {
 	margin: 0 0 10px 0!important;
 	display: inline-block;
-	font-size: 30px;
+	font-size: 20px;
 	color: #333!important;
 	position: relative;
 }
@@ -1207,7 +1232,7 @@ body  .fancybox-close {
 .cell {
 	background-size: cover;background-position: center center;
     background-repeat: no-repeat;
-    /*border:1px solid  #ffbe00;*/
+    /*border:1px solid  #fad200;*/
 }
 .free-walls > div {
 	position: relative;
@@ -1267,7 +1292,7 @@ body  .fancybox-close {
 }
 
 input,textarea {
-	border: 1px solid #ffbe00;
+	border: 1px solid #fad200;
 }
 
 .post-navigation {display: none;}
@@ -1298,7 +1323,7 @@ input,textarea {
 	height: 36px;
 	padding: 0 10px;
 	width: 100%;
-	border: 1px solid #ffbe00;
+	border: 1px solid #fad200;
 	margin-top: 5px;
 	background: #fef6cc;
 }	
@@ -1487,7 +1512,6 @@ footer.entry-meta {
 }
  .post .date {
     background: #fad200;
-     border-left: 10px solid #eecb00;
     display: block;
     
     height: 100px;
@@ -1510,7 +1534,7 @@ font-size: 24px;
 }
 .single .post {
 	border: none;
-	border-bottom: 3px solid #ffbe00;
+	border-bottom: 3px solid #fad200;
 }
 .single .entry-meta > span a {
 	margin: 0 0 15px 0;
@@ -1553,11 +1577,11 @@ font-size: 24px;
     cursor: pointer;
 }
 .contact-form {
-	  background: #ffbe00 none repeat scroll 0 0;
+	  background: #fad200 none repeat scroll 0 0;
     float: none;
     padding: 20px;
     position: absolute;
-    right: -162px;
+    right:0px;
     top: 72px;
     z-index: 9;
 }
@@ -1575,7 +1599,7 @@ span.wpcf7-not-valid-tip {
 	
 }
 .contact-form {	 
-    width: 436px;
+    width: 600px;
 }
 
 .readmore {
@@ -1663,7 +1687,7 @@ span.wpcf7-not-valid-tip {
     border-radius: 1px;
     display: block;
     height: 2px;
-    width: 22px;background: #ffbe00;
+    width: 22px;background: #fad200;
      margin: 5px 0;
 }
 
@@ -1680,8 +1704,20 @@ span.wpcf7-not-valid-tip {
 }
 
 @media (max-width: 768px) {
-
-
+#homeBanner  {
+	margin-top: 0px;
+	  height: auto !important;
+}
+.entry-title {
+	padding-left: 0;
+}
+.post .date {
+	display: none;
+}
+.entry-title a {
+	font-size: 24px;
+	min-height: 50px;
+}
 .taxonomy-description h1 ,.title-heading{
 	font-size: 30px;
 }
@@ -1766,7 +1802,24 @@ span.wpcf7-not-valid-tip {
 .sidebar-container .widget   li {
 	margin: 10px 0;
 }
+@media (max-width: 1024px) { 
+.contact-form {
+	right: 0;
+}
+}
 @media (max-width: 768px) {
+	.contact-form {
+		 display: block;
+    left: 50%;
+    position: absolute;
+    top: 10px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 90%;
+	}
+	.close {
+		left: auto;right: 18px;
+	}
 	.category-layout {
 	margin: 0 auto;
 	margin-right: 0px ;
@@ -1787,7 +1840,7 @@ span.wpcf7-not-valid-tip {
 	
 
 	.toggle-mobile {
-		border: 3px solid #ffbe00;
+		border: 3px solid #fad200;
 	    display: block;
 	    float: right;
 	        text-align: center;
@@ -1839,7 +1892,7 @@ span.wpcf7-not-valid-tip {
 		display: block;
 	}
 	.site-header .menu li a {
-		 border: 1px solid #ffbe00;
+		 border: 1px solid #fad200;
 		 margin: -1px 0;
 	}
 	.container {
