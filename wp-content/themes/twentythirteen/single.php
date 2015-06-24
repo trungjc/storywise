@@ -12,6 +12,7 @@ get_header(); ?>
 	<div id="primary" class="site-main">
 		<div id="content" class="container" role="main">
 		<?php get_sidebar(); ?>
+		<div class="left-bar">
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -21,7 +22,7 @@ get_header(); ?>
 				<?php comments_template(); ?>
 
 			<?php endwhile; ?>
-
+</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

@@ -170,24 +170,29 @@ jQuery('.fancybox-media-project')
 		jQuery(this).next().toggleClass('active');
 	});
 	jQuery('.menu a[href="#contact-form"],.contact-trigger').on('click',function(){
-		
+
 		
 		//console.log(total);
 		var tem=jQuery(this).attr('href');
 		var w= jQuery(window).height();
-		//var y = jQuery('.top-section').height() 
-		//var z = jQuery('.button-section').height();
-		if (w>768) {
-			var total = w - 480;
+		var y = jQuery('.top-section').height() 
+		var z = jQuery('.button-section').height();
+		console.log(w);
+		console.log(y);
+		console.log(z);
+			var total = w - y - z - 150;
+			console.log(total);
+		//if (w > 768 ) {
 			jQuery('.your-message textarea').css('height',total);
-		}
-		jQuery(tem).fadeIn();
+		//}
+		
+		jQuery(tem).css( {'opacity': '1','visibility': 'visible' });
 		return false;
 
 	});
 	jQuery('.close').on('click',function(e){
 		e.stopPropagation();
-		jQuery(this).parents('.contact-form').fadeOut();
+		jQuery(this).parents('.contact-form').css( {'opacity': '0','visibility': 'hidden' });
 		return false;
 	});
 	/*jQuery('.testimonials-slider').bxSlider({

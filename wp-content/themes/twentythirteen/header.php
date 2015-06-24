@@ -38,7 +38,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-		<div id="contact-form" class="contact-form" style="display: none">
+		<div id="contact-form" class="contact-form" style="opacity: 0;visibility: hidden;">
 						<?php echo do_shortcode( '[contact-form-7 id="6" title="Contact form"]' ); ?>
 		</div>	
 		<header role="banner" class="site-header" id="masthead">

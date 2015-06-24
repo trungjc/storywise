@@ -25,7 +25,7 @@ get_header(); ?>
 	<div id="primary" class="site-main">
 		<div id="content" class="container" role="main">
 		<?php get_sidebar(); ?>
-<div class="category-layout">
+<div class="category-layout left-bar">
 		<?php if ( have_posts() ) : ?>
 			
 			<?php /* The loop */ ?>
