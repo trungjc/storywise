@@ -38,7 +38,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+		<div id="contact-form" class="contact-form" style="display: none">
+						<?php echo do_shortcode( '[contact-form-7 id="6" title="Contact form"]' ); ?>
+		</div>	
 		<header role="banner" class="site-header" id="masthead">
 			<div class="container clearfix">
 				<a class="pull-left logo" rel="home" title="<?php bloginfo( 'name' ); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>" >
@@ -56,9 +58,7 @@
 				</a>
 				<div class="menu">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menus', 'menu_id' => 'primary-menu' ) ); ?>
-					<div id="contact-form" class="contact-form" style="display: none">
-						<?php echo do_shortcode( '[contact-form-7 id="6" title="Contact form"]' ); ?>
-					</div>	
+					
 				</div>		
 			</div>
 			</div>

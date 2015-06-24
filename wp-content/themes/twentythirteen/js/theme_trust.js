@@ -170,9 +170,20 @@ jQuery('.fancybox-media-project')
 		jQuery(this).next().toggleClass('active');
 	});
 	jQuery('.menu a[href="#contact-form"],.contact-trigger').on('click',function(){
+		
+		
+		//console.log(total);
 		var tem=jQuery(this).attr('href');
+		var w= jQuery(window).height();
+		//var y = jQuery('.top-section').height() 
+		//var z = jQuery('.button-section').height();
+		if (w>768) {
+			var total = w - 480;
+			jQuery('.your-message textarea').css('height',total);
+		}
 		jQuery(tem).fadeIn();
 		return false;
+
 	});
 	jQuery('.close').on('click',function(e){
 		e.stopPropagation();
