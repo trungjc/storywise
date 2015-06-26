@@ -35,7 +35,7 @@ $loop = new WP_Query( $args );
      <?php
         if ($post->ID == 45) { ?>
         <div style="<?php $style ?>" class="banner" id="homeBanner">
-            <img style="position:absolute;width:100%;height:auto;z-index:1" src="<?php echo $image[0] ?>" / >
+            <img style="width:100%;" src="<?php echo $image[0] ?>" / >
 			<div class="container">
 				<div class="banner-inner" style="position:relative;z-index:2">
                 <div class="video-mobile" style="display:none">

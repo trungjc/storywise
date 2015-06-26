@@ -523,13 +523,16 @@ ul {
 #homeBanner {
     background-color: #fff;
     display: block;
-    height: 450px;
+    
     margin: 0 auto;
     overflow: hidden;
     position: relative;
     width: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat; background-position: center ;
+}
+@media(max-width: 1337px) {
+	#homeBanner {max-height: 450px;}
 }
 .help h2 {
 	color: #122e4e;
@@ -692,7 +695,7 @@ hr
 }
 #bannerText.scrolling {
    /* position: fixed;
-    */top: 250px;
+    */top: -250px;
     width: 100%;
     padding-top: 55px;
     padding-left: 44px;
@@ -1641,13 +1644,9 @@ span.wpcf7-not-valid-tip {
 	    margin: 0 auto;
 	    width: 920px;
 	}
-	.home #homeBanner {
-		height: 250px
-	}
+	
  .home #bannerText.scrolling{padding-top:30px;}
- #bannerText.scrolling {
- 	top:100px;
- }
+
 		
 #bannerText.scrolling h2 {
     font-size: 30px;
