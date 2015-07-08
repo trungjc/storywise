@@ -559,48 +559,7 @@ add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
 
 
 
-// create shortcode with parameters so that the user can define what's queried - default is to list all blog posts
-/*add_shortcode( 'list-posts', 'rmcc_post_listing_parameters_shortcode' );
-function rmcc_post_listing_parameters_shortcode( $atts ) {
-    ob_start();
- 
-    // define attributes and their defaults
-    extract( shortcode_atts( array (
-       // 'type' => 'post',
-        'order' => 'date',
-        'orderby' => 'title',
-        'posts' => -1,
-        
-        'category' => '',
-    ), $atts ) );
- 
-    // define query parameters based on attributes
-    $options = array(
-        //'post_type' => $type,
-        'order' => $order,
-        'orderby' => $orderby,
-        'posts_per_page' => $posts,        
-        'category_name' => $category,
-    );
-    $query = new WP_Query( $options );
-    //print_r($query);
-    // run the loop based on the query
-    if ( $query->have_posts() ) { ?>
-    <ul class="clothes-listing ">
-     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-        
-           <li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </li>
-            <?php endwhile;
-            wp_reset_postdata(); ?>
-              </ul>
-    <?php
-        $myvariable = ob_get_clean();
-        return $myvariable;
-    }
-}
-*/
+
 
 // create shortcode to list all clothes which come in blue
 add_shortcode( 'list-posts', 'rmcc_post_listing_shortcode1' );
@@ -690,7 +649,6 @@ function rmcc_post_listing_shortcode1( $atts ) {
 
 
 // Hooking up our function to theme setup
-add_action( 'init', 'create_post_type_home_section' );
 
 function the_slug() {
     $post_data = get_post($post->ID, ARRAY_A);
@@ -698,8 +656,7 @@ function the_slug() {
     return $slug; 
 }
 
-function create_post_type_home_section()
-{
+function create_post_type_home_section(){
     register_taxonomy_for_object_type('category', 'home-section'); // Register Taxonomies for Category
     register_taxonomy_for_object_type('post_tag', 'home-section');
     register_post_type('home-section', // Register Custom Post Type
@@ -731,6 +688,47 @@ function create_post_type_home_section()
         'can_export' => true
     ));
 }
+
+add_action( 'init', 'create_post_type_home_section' );
+
+
+function create_post_type_member(){
+    register_taxonomy_for_object_type('category', 'member-section'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'member-section');
+    register_post_type('member-section', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Member section  ', 'member'), // Rename these to suit
+            'singular_name' => __('member section  Post', 'member'),
+            'add_new' => __('Add New', 'member'),
+            'add_new_item' => __('Add New member section  Post', 'member'),
+            'edit' => __('Edit', 'member'),
+            'edit_item' => __('Edit member section  Post', 'member'),
+            'new_item' => __('New member section  Post', 'member'),
+            'view' => __('View member section  Post', 'member'),
+            'view_item' => __('View member section  Post', 'member'),
+            'search_items' => __('Search member  Post', 'member'),
+            'not_found' => __('No member Posts found', 'member'),
+            'not_found_in_trash' => __('No member   Posts found in Trash', 'member')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+             'custom-fields',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true
+    ));
+}
+
+add_action( 'init', 'create_post_type_member' );
+
+
+
 
 // Replaces the excerpt "more" text by a link
 add_filter('the_content', 'replace_content');
@@ -779,4 +777,72 @@ add_shortcode('categoryposts', 'wpb_postsbycategory');
 
 // Enable shortcodes in text widgets
 add_filter('widget_text', 'do_shortcode');
+
+
+
+// create shortcode to list all clothes which come in blue
+add_shortcode( 'list-member', 'rmcc_post_listing_member' );
+function rmcc_post_listing_member( $atts ) {
+    ob_start();
+ global $post;
+    // define attributes and their defaults
+    extract( shortcode_atts( array (
+       // 'type' => 'post',
+        'order' => 'date',
+        'orderby' => 'title',
+        'posts' => -1,
+        
+        'post_type' => 'member-section',
+    ), $atts ) );
+ 
+    // define query parameters based on attributes
+    $options = array(
+        //'post_type' => $type,
+        'order' => $order,
+        'orderby' => $orderby,
+        'posts_per_page' => $posts,        
+        'post_type' => 'member-section',
+    );
+     $query = new WP_Query( $options );
+    if ( $query->have_posts() ) { ?>
+	        <div class="list-member  ">
+	        <div class="clearfix row ">
+	            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+	            <?php if (has_post_thumbnail($post->ID)) { ?>
+			        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'full')); ?>
+			        <?php
+			        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full");
+			       // $class ='has-bg';
+			        $style = "background: url('" . $image[0] . "') no-repeat center center ; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; "    ?>
+			        <?php
+			    } else {
+			        $style = "background: url('" .  get_template_directory_uri() . "/images/no-image-available.jpg') no-repeat center center ; -webkit-background-size: cover; -moz-background-size: cover;  -o-background-size: cover;  background-size: cover; ";
+			    }
+			    ?>
+
+	            <div id="post-<?php the_ID(); ?>" class="member play-c  " style="<?php  echo $style ?>">
+	            	<div class="member-inner mask-layer">
+					<div class="member-item" >
+						 <div class="short-detail project-detail">
+						 	<h2 class="title"><?php the_title(); ?></h2>
+						 	<?php the_excerpt( ); ?>
+						 	<a href="#" style="display:block;color:#858585" class="readmore1">[read more..]</a>
+						 </div>
+						
+					</div>
+					<div class="content-post" style="display: none">
+						<h2 class="title"><?php the_title(); ?></h2>
+						<?php the_content( ); ?>
+
+					</div>
+	            </div>
+	             </div>
+	            <?php endwhile;
+	            wp_reset_postdata(); ?>
+	        </div>
+	        </div>
+    <?php $myvariable = ob_get_clean();
+    return $myvariable;
+    }
+}
 

@@ -195,6 +195,30 @@ jQuery('.fancybox-media-project')
 		jQuery(this).parents('.contact-form').css( {'opacity': '0','visibility': 'hidden' });
 		return false;
 	});
+
+
+	jQuery('.readmore1').on('click', function(e) {
+					var $source = jQuery(e.target);
+					var tem=jQuery(this).parents('.row');
+					jQuery('.play-c').removeClass('active');
+					jQuery(this).parents('.member').addClass('active');
+					jQuery(this).parents('.list-member').addClass('clickable');
+					var masklayer=jQuery(this).parents('.mask-layer').find('.content-post').html();
+					
+					jQuery('.mediaContainer').remove();
+					tem.after('<div class="mediaContainer row"></div>');						
+						jQuery('html, body').animate({
+        						scrollTop: jQuery(".mediaContainer").offset().top -70
+    					}, 2000);
+						jQuery('.mediaContainer').append(masklayer);
+						
+				
+					return false;
+				});
+
+
+
+
 	/*jQuery('.testimonials-slider').bxSlider({
 				minSlides: 1,
 				maxSlides: 1,
