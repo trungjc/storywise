@@ -115,7 +115,7 @@ function display_testimonial_slider($atts) {
  
         $client_name_value =get_post_meta(get_the_ID(), 'Client Name', true);
 		$link_value = get_post_meta(get_the_ID(), '_link', true);
- 		$url =wp_get_attachment_thumb_url( get_post_thumbnail_id(@$post->ID) );
+ 		$url =wp_get_attachment_thumb_url( get_post_thumbnail_id(@$post->ID) ,'full');
         $result .='<li>'; // Start Slide
  
 		$result .='<div class="cbp-qtcontent">'; // Start Slide
