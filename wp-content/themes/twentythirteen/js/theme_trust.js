@@ -208,7 +208,7 @@ jQuery('.fancybox-media-project')
 					jQuery('.mediaContainer').remove();
 					tem.after('<div class="mediaContainer row"></div>');						
 						jQuery('html, body').animate({
-        						scrollTop: jQuery(".mediaContainer").offset().top -70
+        						scrollTop: jQuery(".mediaContainer").offset().top -340
     					}, 2000);
 						jQuery('.mediaContainer').append(masklayer);
 						

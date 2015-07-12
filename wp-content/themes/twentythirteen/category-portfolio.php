@@ -24,7 +24,7 @@ get_header(); ?>
 	</div>
 	<div id="primary" class="site-main">
 		<div id="content" class="container" role="main">
-	
+	<div class="mediaContainer row"><iframe style="display:none" width="100%" height="450" src="" class="inlineMedia"></iframe><div class="inner"></div></div>
 <div id="freewalls" class="free-walls clearfix">
 		<?php if ( have_posts() ) : ?>
 			
@@ -156,30 +156,34 @@ get_header(); ?>
 					var tem=jQuery(this).parents('.row');
 					var masklayer=jQuery(this).parents('.mask-layer').find('.content-post').html();
 					
-					jQuery('.mediaContainer').remove();
-					tem.before('<div class="mediaContainer row"></div>');
+					jQuery('.mediaContainer .inner *').remove();
+					//tem.before('<div class="mediaContainer row"></div>');
 
 					if(jQuery(this).attr('href') !='') {
-						var ifr = "<iframe width='100%' height='450' class='inlineMedia' src='" + e.target.href + "'></iframe>";
-						jQuery('.mediaContainer').html(ifr);
+						//var ifr = "<iframe width='100%' height='450' class='inlineMedia' src='" + e.target.href + "'></iframe>";
+						jQuery('.mediaContainer').find('.inlineMedia').css('display','block').attr('src',e.target.href);
+						jQuery('.mediaContainer .inner').append(masklayer);
+						jQuery('.full-content').removeClass('active');
 						jQuery('html, body').animate({
-        						scrollTop: jQuery(".mediaContainer").offset().top -70
-    					}, 2000);
-						jQuery('.mediaContainer').append(masklayer);
-						//var target =jQuery("mediaContainer");
+        						scrollTop: jQuery(".mediaContainer").offset().top - 150
+    					}, 2000,function(){
+    						
+    					});
+						
+						
 						   
 
 					}else {
 						jQuery('.mediaContainer').html('<h1 style="text-align:center;padding:20px">no video</h1>').append(masklayer);
 						jQuery('html, body').animate({
-        						scrollTop: jQuery(".mediaContainer").offset().top - 70
+        						scrollTop: jQuery(".mediaContainer").offset().top - 150
     					}, 2000);
 					}
-				jQuery('.readmore').on('click', function(event) {
-					event.stopPropagation();
-					jQuery('.full-content').removeClass('active');	
-					jQuery('.full-content').addClass('active');	
-				});
+					jQuery('.readmore').on('click', function(event) {
+						event.stopPropagation();
+						jQuery('.full-content').toggleClass('active');	
+						//jQuery('.full-content').addClass('active');	
+					});
 				
 					return false;
 				});
